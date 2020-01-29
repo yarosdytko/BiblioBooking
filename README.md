@@ -2,6 +2,7 @@
 **Nombre de la aplicacion Web:** BiblioBooking
 
 **Descripcion:** La tematica elegida para este proyecto web es la de implementar un portal de reservas de salas en una biblioteca(como por ej la del campus), de esta manera los alumnos tendrian una herramienta que les permitiria realizar y gestionar sus reservas de sala en una biblioteca de manera rapida y comoda.
+
 **Funcionalidades:** La funcionalidad **publica** trata de ofrecerle al usuario informacion general sobre la biblioteca(distribucion, horarios, direccion, etc), de esta manera cualquier persona que acceda a la web puede tener toda la informacion de interes sobre el lugar, por otra parte la funcionalidad **privada** requerira que el usuario se de de alta en el sistema, de esta manera un usuario registrado podra tener acceso a las funcionalidades de hacer reservas de sala, consultar disponibilidade de salas, gestionar(modificar,  cancelar) sus reservas actuales.
 
 **Tipos de usuario:** se podria diferenciar 4 tipos de usuarios: 
