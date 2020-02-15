@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Reserva {
@@ -12,7 +13,10 @@ public class Reserva {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idReserva;
 	
+	@OneToOne
 	private Sala salaReservada;
+	
+	@OneToOne
 	private Alumno alumno;
 	
 	public Reserva() {
@@ -20,10 +24,10 @@ public class Reserva {
 	}
 	
 	public Reserva(Sala sala, Alumno alumno) {
-		this.setSalaReservada(sala);
-		this.setAlumno(alumno);
+		this.salaReservada = sala;
+		this.alumno = alumno;
 	}
-
+	
 	public Sala getSalaReservada() {
 		return salaReservada;
 	}

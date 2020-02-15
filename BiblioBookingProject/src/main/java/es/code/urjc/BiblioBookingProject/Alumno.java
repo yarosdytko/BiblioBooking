@@ -1,9 +1,12 @@
 package es.code.urjc.BiblioBookingProject;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Alumno {
@@ -13,6 +16,9 @@ public class Alumno {
 	private long numExpediende;
 	
 	private String nombre,apellido;
+	
+	@OneToMany
+	private List<Reserva> reservas;
 	
 	public Alumno() {
 		
