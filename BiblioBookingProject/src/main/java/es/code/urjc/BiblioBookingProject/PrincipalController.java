@@ -52,11 +52,6 @@ public class PrincipalController{
 		return "perfil";
 	}
 	
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
-	
 	@RequestMapping("/register")
 	public String register() {
 		return "register";
