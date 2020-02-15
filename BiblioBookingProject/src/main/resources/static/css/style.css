@@ -35,3 +35,21 @@ li a:hover {
 .active {
   	background-color: #4CAF50;
 }
+
+section {
+	margin-top:10px;
+}
+
+.loginForm {
+	text-align: center;
+}
+
+.loginForm input {
+	width:25%;
+	padding: 12px 20px;
+	/*align-items: center;*/
+  	margin: 8px 0;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	box-sizing: border-box;
+}

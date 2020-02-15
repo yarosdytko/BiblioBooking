@@ -1,6 +1,7 @@
 package es.code.urjc.BiblioBookingProject;
 
 import javax.annotation.PostConstruct;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,14 @@ public class PrincipalController{
 	}
 	
 	@RequestMapping("/")
-	public String index() {
+	public String index(Model model, HttpSession session) {
+		
+		if(session.isNew()) {
+			model.addAttribute("sesion","Sesion nueva");
+		} else {
+			model.addAttribute("sesion","Sesion actual");
+		}
+		
 		return "index";
 	}
 	
@@ -42,6 +50,16 @@ public class PrincipalController{
 	@RequestMapping("/perfil")
 	public String perfil() {
 		return "perfil";
+	}
+	
+	@RequestMapping("/login")
+	public String login() {
+		return "login";
+	}
+	
+	@RequestMapping("/register")
+	public String register() {
+		return "register";
 	}
 
 	@RequestMapping("/alumnos")

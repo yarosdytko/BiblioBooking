@@ -8,7 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 @Entity
+@Component
+@SessionScope
 public class Alumno {
 
 	@Id
@@ -16,6 +21,7 @@ public class Alumno {
 	private long numExpediende;
 	
 	private String nombre,apellido;
+	private boolean usuarioLogueado;
 	
 	@OneToMany
 	private List<Reserva> reservas;
@@ -43,6 +49,14 @@ public class Alumno {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public boolean usuarioLogueado() {
+		return usuarioLogueado;
+	}
+
+	public void setUsuarioLogueado(boolean usuarioLogueado) {
+		this.usuarioLogueado = usuarioLogueado;
 	}
 }
 

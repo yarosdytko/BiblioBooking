@@ -5,7 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.SessionScope;
+
 @Entity
+@Component
+@SessionScope
 public class Administrador {
 	
 	@Id
@@ -15,6 +20,7 @@ public class Administrador {
 	private String nombre;
 	private String apellido;
 	private String userName;
+	private boolean usuarioActivo;
 	
 	public Administrador() {
 		
@@ -48,6 +54,14 @@ public class Administrador {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public boolean isUsuarioActivo() {
+		return usuarioActivo;
+	}
+
+	public void setUsuarioActivo(boolean usuarioActivo) {
+		this.usuarioActivo = usuarioActivo;
 	}
 
 }
