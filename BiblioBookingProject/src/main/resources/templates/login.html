@@ -20,6 +20,7 @@
 			  <li><a href="/perfil">Mi perfil</a></li>
 			  <li><a href="/login">Login</a></li>
 			  <li><a href="/register">Registrarse</a></li>
+			  <li><a href="/admin">Panel Administrador</a>
 			</ul>
 		</nav>
 		<section>
@@ -33,10 +34,16 @@
 				<button type="submit">Login</button>
 			</div>
 			</form>
-			{{#silent}}
-			<p>{{nombre}}</p>
-			<p>{{passwd}}</p>
-			{{/silent}}
+			{{#userOK}}
+			<p>
+			{{nombre}}<br>
+			{{apellido}}<br>
+			{{userName}}
+			</p>
+			{{/userOK}}
+			{{#userNoOk}}
+			<p>Datos incorrectos, revise usuario y contraseña</p>
+			{{/userNoOk}}
 		</section>
 	</main>
 </body>

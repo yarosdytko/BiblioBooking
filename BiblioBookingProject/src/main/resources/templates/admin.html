@@ -23,7 +23,13 @@
 			</ul>
 		</nav>
 		<section>
-			<p>admin</p>
+			{{#ifAdmin}}
+			<p>{{nombre}}</p>
+			<p>{{apellido}}</p>
+			<p>{{userName}}</p>
+			{{/ifAdmin}}
+			
+			<p>Admin panel</p>
 		</section>
 	</main>
 </body>

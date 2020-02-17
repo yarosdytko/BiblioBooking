@@ -1,6 +1,0 @@
-package es.code.urjc.BiblioBookingProject;
-
-@Controller
-public class AdminController {
-
-}

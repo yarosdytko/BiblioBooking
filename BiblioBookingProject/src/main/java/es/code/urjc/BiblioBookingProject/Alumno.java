@@ -20,7 +20,7 @@ public class Alumno {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long numExpediende;
 	
-	private String nombre,apellido;
+	private String nombre,apellido,userName,password;
 	private boolean usuarioLogueado;
 	
 	@OneToMany
@@ -30,9 +30,11 @@ public class Alumno {
 		
 	}
 	
-	public Alumno(String nombre, String apellido) {
-		this.setApellido(apellido);
-		this.setNombre(nombre);
+	public Alumno(String nombre, String apellido, String userName, String password) {
+		this.nombre=nombre;
+		this.apellido=apellido;
+		this.userName=userName;
+		this.password=password;
 	}
 
 	public String getApellido() {
@@ -57,6 +59,22 @@ public class Alumno {
 
 	public void setUsuarioLogueado(boolean usuarioLogueado) {
 		this.usuarioLogueado = usuarioLogueado;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 }
 

@@ -20,16 +20,18 @@ public class Administrador {
 	private String nombre;
 	private String apellido;
 	private String userName;
+	private String password;
 	private boolean usuarioActivo;
 	
 	public Administrador() {
 		
 	}
 	
-	public Administrador(String nombre, String apellido, String userName) {
-		this.setNombre(nombre);
-		this.setApellido(apellido);
-		this.setUserName(userName);
+	public Administrador(String nombre, String apellido, String userName, String password) {
+		this.nombre=nombre;
+		this.apellido=apellido;
+		this.userName=userName;
+		this.password=password;
 	}
 
 	public String getNombre() {
@@ -63,5 +65,20 @@ public class Administrador {
 	public void setUsuarioActivo(boolean usuarioActivo) {
 		this.usuarioActivo = usuarioActivo;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	  @Override
+	  public String toString() {
+	    return String.format(
+	        "Customer[id=%d, firstName='%s', lastName='%s', username='%s']",
+	        idAdmin, nombre, apellido, userName);
+	  }
 
 }
