@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<h2>Alumnos: </h2>
+	{{#alumnos}}
+	<p>{{nombre}} {{apellido}}</p>
+	{{/alumnos}}
+</body>
+</html>
