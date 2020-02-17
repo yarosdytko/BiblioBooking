@@ -13,14 +13,15 @@
 		</header>
 		<nav>
 			<ul>
-			  <li><a href="/">Inicio</a></li>
-			  <li><a href="/informacion">Informacion</a></li>
-			  <li><a href="/contacto">Contacto</a></li>
-			  <li><a href="/reservas">Mis reservas</a></li>
-			  <li><a href="/perfil">Mi perfil</a></li>
-			  <li><a href="/login">Login</a></li>
-			  <li><a href="/register">Registrarse</a></li>
-			  <li><a href="/admin">Panel Administrador</a>
+				<li><a href="/">Inicio</a></li>
+			  	<li><a href="/informacion">Informacion</a></li>
+			  	<li><a href="/contacto">Contacto</a></li>
+			  	<li>{{#alumno}}<a href="/reservas">Mis reservas</a>{{/alumno}}</li>
+			  	<li>{{#noVisitante}}<a href="/perfil">Mi perfil</a>{{/noVisitante}}</li>
+			  	<li>{{#login}}<a href="/login">Login</a>{{/login}}</li>
+			  	<li><a href="/register">Registrarse</a></li>
+			  	<li>{{#admin}}<a href="/admin">Panel Administrador</a>{{/admin}}</li>
+			  	<li>{{#empleado}}<a href="/gestion">Gestion</a>{{/empleado}}</li>
 			</ul>
 		</nav>
 		<section>
@@ -32,18 +33,12 @@
 				<input type="password" placeholder="" name="passwd" required>
 				
 				<button type="submit">Login</button>
+				<br>
+				{{#userNoOk}}
+					<h4>Datos incorrectos, revise usuario y contraseña</h4>
+				{{/userNoOk}}
 			</div>
 			</form>
-			{{#userOK}}
-			<p>
-			{{nombre}}<br>
-			{{apellido}}<br>
-			{{userName}}
-			</p>
-			{{/userOK}}
-			{{#userNoOk}}
-			<p>Datos incorrectos, revise usuario y contraseña</p>
-			{{/userNoOk}}
 		</section>
 	</main>
 </body>

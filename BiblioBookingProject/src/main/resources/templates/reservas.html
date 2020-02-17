@@ -23,7 +23,12 @@
 			</ul>
 		</nav>
 		<section>
-			<p>reservas</p>
+			<div class="misReservas">
+				<h3>Mis reservas</h3>
+				{{#reservas}}
+					{{reserva}}
+				{{/reservas}}
+			</div>
 		</section>
 	</main>
 </body>

@@ -15,15 +15,18 @@ public class Empleado {
 	private String nombre;
 	private String apellido;
 	private String userName;
+	//private String email;
+	private String password;
 	
 	public Empleado() {
 		
 	}
 	
-	public Empleado(String nombre, String apellido, String userName) {
-		this.setNombre(nombre);
-		this.setApellido(apellido);
-		this.setUserName(userName);
+	public Empleado(String nombre, String apellido, String userName,String password) {
+		this.nombre=nombre;
+		this.apellido=apellido;
+		this.userName=userName;
+		this.password=password;
 	}
 
 	public String getNombre() {
@@ -48,5 +51,13 @@ public class Empleado {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

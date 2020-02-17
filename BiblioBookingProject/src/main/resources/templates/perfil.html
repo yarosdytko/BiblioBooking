@@ -15,15 +15,24 @@
 			  <li><a href="/">Inicio</a></li>
 			  <li><a href="/informacion">Informacion</a></li>
 			  <li><a href="/contacto">Contacto</a></li>
-			  <li><a href="/reservas">Mis reservas</a></li>
-			  <li><a href="/perfil">Mi perfil</a></li>
+			  <li>{{#alumno}}<a href="/reservas">Mis reservas</a>{{/alumno}}</li>
+			  <li>{{#noVisitante}}<a href="/perfil">Mi perfil</a>{{/noVisitante}}</li>
 			  <li><a href="/login">Login</a></li>
 			  <li><a href="/register">Registrarse</a></li>
-			  <li><a href="/admin">Panel Administrador</a>
+			  <li>{{#admin}}<a href="/admin">Panel Administrador</a>{{/admin}}</li>
 			</ul>
 		</nav>
 		<section>
-			<p>perfil</p>
+		{{#usuarioData}}
+			<div class=perfilUsuario>
+				<p>
+					Nombre: {{nombre}}<br>
+					Apellido: {{apellido}}<br>
+					Nombre de usuario: {{nombreUsuario}}<br>
+					Tipo de usuario: {{tipoUsuario}}
+				</p>
+			</div>
+		{{/usuarioData}}
 		</section>
 	</main>
 </body>
