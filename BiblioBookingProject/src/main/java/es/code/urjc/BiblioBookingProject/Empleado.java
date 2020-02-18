@@ -15,7 +15,6 @@ public class Empleado {
 	private String nombre;
 	private String apellido;
 	private String userName;
-	//private String email;
 	private String password;
 	
 	public Empleado() {

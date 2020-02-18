@@ -3,6 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+.controles {
+	width:40%;
+	display: inline-block;
+}
+</style>
 <title>BiblioBooking</title>
 </head>
 <body>
@@ -24,13 +30,11 @@
 			</ul>
 		</nav>
 		<section>
-			{{#ifAdmin}}
-			<p>{{nombre}}</p>
-			<p>{{apellido}}</p>
-			<p>{{userName}}</p>
-			{{/ifAdmin}}
-			
-			<p>Admin panel</p>
+		<div class="controles">
+			<a><button>Gestion de reservas</button></a>
+			<a><button>Gestion de usuarios</button></a>
+			<a><button>Gestion de salas</button></a>
+		</div>
 		</section>
 	</main>
 </body>

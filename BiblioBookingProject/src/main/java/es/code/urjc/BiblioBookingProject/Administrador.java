@@ -16,7 +16,6 @@ public class Administrador {
 	private String apellido;
 	private String userName;
 	private String password;
-	private boolean usuarioActivo;
 	
 	public Administrador() {
 		
@@ -51,14 +50,6 @@ public class Administrador {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
-	}
-
-	public boolean isUsuarioActivo() {
-		return usuarioActivo;
-	}
-
-	public void setUsuarioActivo(boolean usuarioActivo) {
-		this.usuarioActivo = usuarioActivo;
 	}
 
 	public String getPassword() {

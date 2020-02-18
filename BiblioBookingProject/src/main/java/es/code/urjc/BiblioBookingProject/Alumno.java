@@ -16,8 +16,7 @@ public class Alumno {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long numExpediende;
 	
-	private String nombre,apellido,userName,password;
-	private boolean usuarioLogueado;
+	private String nombre,apellido,userName,email,password;
 	
 	@OneToMany
 	private List<Reserva> reservas;
@@ -26,10 +25,11 @@ public class Alumno {
 		
 	}
 	
-	public Alumno(String nombre, String apellido, String userName, String password) {
+	public Alumno(String nombre, String apellido, String userName,String email, String password) {
 		this.nombre=nombre;
 		this.apellido=apellido;
 		this.userName=userName;
+		this.email = email;
 		this.password=password;
 	}
 
@@ -49,14 +49,6 @@ public class Alumno {
 		this.nombre = nombre;
 	}
 
-	public boolean usuarioLogueado() {
-		return usuarioLogueado;
-	}
-
-	public void setUsuarioLogueado(boolean usuarioLogueado) {
-		this.usuarioLogueado = usuarioLogueado;
-	}
-
 	public String getPassword() {
 		return password;
 	}
@@ -71,6 +63,14 @@ public class Alumno {
 
 	public void setUserName(String userName) {
 		this.userName = userName;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }
 
