@@ -122,6 +122,14 @@ public class PrincipalController{
 		return "login";
 	}
 	
+	@PostMapping("/register")
+	public String index(Model model,@RequestParam String nombre, @RequestParam String apellido, String uname, String email, String passwd, HttpSession sesion) {
+		
+		
+		
+		return "register";
+	}
+	
 	private void generarMenu(Model model, HttpSession sesion) {
 		model.addAttribute("login",true);
 		if(sesion.getAttribute("userType")=="administrador") {

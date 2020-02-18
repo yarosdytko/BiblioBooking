@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.registerForm {
+	text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.cont {
+  padding: 16px;
+  width: 25%;
+  display: inline-block;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%%;
+}
