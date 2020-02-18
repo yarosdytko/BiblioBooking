@@ -18,7 +18,7 @@ public class Alumno {
 	
 	private String nombre,apellido,userName,email,password;
 	
-	@OneToMany
+	@OneToMany(mappedBy="alumno")
 	private List<Reserva> reservas;
 	
 	public Alumno() {

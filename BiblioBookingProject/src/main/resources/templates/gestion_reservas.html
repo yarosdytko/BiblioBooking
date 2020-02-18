@@ -2,13 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<style>
-.controles {
-	width:40%;
-	display: inline-block;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 <title>BiblioBooking</title>
 </head>
 <body>
@@ -30,11 +24,26 @@
 			</ul>
 		</nav>
 		<section>
-		<div class="controles">
-			<a href="/reservas/gestion_reservas"><button>Gestion de reservas</button></a>
-			<a><button>Gestion de usuarios</button></a>
-			<a><button>Gestion de salas</button></a>
-		</div>
+			<table>
+				<thead>
+					<tr>
+						<td></td>
+						<td>Numero sala</td>
+						<td>Sala reservada</td>
+						<td>Alumno</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#reservas}}
+					<tr>
+						<td><input type="checkbox" id="" name="" value=""></input></td>
+						<td>{{idReserva}}</td>
+						<td>{{salaReservada.numeroSala}}</td>
+						<td>{{alumno.nombre}}</td>
+					</tr>
+					{{/reservas}}
+				</tbody>
+			</table>
 		</section>
 	</main>
 </body>

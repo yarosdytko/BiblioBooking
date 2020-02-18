@@ -9,8 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class PrincipalController{
@@ -35,7 +33,14 @@ public class PrincipalController{
 		administradores.save(new Administrador("Ignacio","Perez","NachoPerez","1234"));
 		alumnos.save(new Alumno("Andres","Lum","AndresLum","andresLum@mail.com","1234"));
 		alumnos.save(new Alumno("Luis","Fernandez","LuisFernandez","luFernandez@mail.com","1234"));
+		Alumno alumno = new Alumno("David","Dminguez","DDominguez","d.dominguez@mail.com","1234");
+		alumnos.save(alumno);
 		empleados.save(new Empleado("Juan","Lopez","JuanLopez","1234"));
+		
+		Sala sala1 = new Sala(10,2,5);
+		
+		salas.save(sala1);
+		reservas.save(new Reserva(sala1,alumno));
 	}
 	
 	@RequestMapping("/")
@@ -69,9 +74,16 @@ public class PrincipalController{
 	public String mis_reservas(Model model, HttpSession sesion) {
 		generarMenu(model, sesion);
 		
-		
-		
 		return "reservas";
+	}
+	
+	@RequestMapping("/reservas/gestion_reservas")
+	public String gestion_reservas(Model model, HttpSession sesion) {
+		generarMenu(model, sesion);
+		
+		model.addAttribute("reservas",reservas.findAll());
+		
+		return "gestion_reservas";
 	}
 	
 	@RequestMapping("/perfil")
