@@ -24,35 +24,29 @@
 			</ul>
 		</nav>
 		<section>
-		<a href="/gestion/reservas/nueva_reserva"><button>Nueva reserva</button></a>
-		<p>Total reservas: {{totalReservas}}</p>
-			{{#tablaReservas}}
+		<a href="/gestion/reservas/nueva_sala"><button>Nueva sava</button></a>
+		<p>Total salas: {{totalSalas}}</p>
+			{{#tablaSalas}}
 			<table>
 				<thead>
-					<tr>
-						<td>ID reserva</td>
+					<tr">
 						<td>Numero sala</td>
-						<td>Nombre</td>
-						<td>Apellido</td>
-						<td>Fecha</td>
-						<td>Hora</td>
-						<td> </td>
-						<td> </td>
+						<td>Capacidad</td>
+						<td>Mesas</td>
+						<td>Sillas</td>
 					</tr>
 				</thead>
 				<tbody>
-					{{#reserva}}
+					{{#sala}}
 						<tr>
 							<td>{{idReserva}}</td>
 							<td>{{salaReservada.numeroSala}}</td>
 							<td>{{alumno.name}}</td>
 							<td>{{alumno.apellido}}</td>
-							<td>{{fecha}}</td>
-							<td>{{hora}}</td>
-							<td><a href="/gestion/reservas/editar{{&idReserva}}"><button>Editar</button></a></td>
-							<td><a href="/gestion/reservas/eliminar{{&idReserva}}"><button>Eliminar</button></a></td>
+							<td><a href="/gestion/salas/editar{{&idReserva}}"><button>Editar</button></a></td>
+							<td><a href="/gestion/salas/eliminar{{&idReserva}}"><button>Eliminar</button></a></td>
 						</tr>
-					{{/reserva}}
+					{{/sala}}
 				</tbody>
 			</table>
 			{{/tablaReservas}}
