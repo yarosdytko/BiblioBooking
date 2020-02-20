@@ -26,3 +26,36 @@ Integrantes de grupo: Yaroslav Dytko
 Correo: y.dytko.2017@alumnos.urjc.es
 
 Github: yarosdytko ([https://github.com/yarosdytko](https://github.com/yarosdytko))
+
+**Fase2**
+Diagrama de navegacion
+![Diagrama de navegacion](https://github.com/yarosdytko/BiblioBooking/blob/master/diagrama_de_navegacion.png)
+La aplicacion esta estructurada alrededor de un menu de navegacion principal desde el cual se accede a todos los recursos y funcionalidades
+A continuacion vienen detalladas algunas capturas de las vistas principales de la aplicacion.
+- inicio - una pantalla de bienvenida al usuario presentando informacion general sobre la aplicacion
+![inicio](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/index.png)
+- informacion - presenta informacion general sobre la biblioteca ![informacion](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/informacion.png)
+- Mis reservas - el alumno puede ver sus reservas actuales, editarlas o crear una reserva nueva
+![mis_reservas](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/mis_reservas.png)
+- Nueva reserva - en esta ventana el alumno puede hacer una reserva nueva
+![nueva_reserva](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/nueva_reserva.png)
+- Mi perfil - muesta los datos del perfil de usuario, en futuras implementaciones el usuario podra editar agunos de sus datos
+![mi_perfil](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/mi_perfil.png)
+- Login - pantalla de login para acceso a la parte privada de la aplicacion(en esta fase no se usa)
+![login](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/login.png)
+- Registrarse - formulario de registro para alumnos
+![registrarse](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/register.png)
+- Panel administrador - panel de control para administradores, permite realizar gestiones con reservas, usuarios y salas
+![panel_admin](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/panel_admin.png)
+- Gestion - panel de control para empleados de la biblioteca, permite gestionar reservas, salas y ususarios(bloquear)
+![gestion](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/gestion.png)
+- Nuevo usuario - accesible desde panel de administrador, permite crear usuarios de tipo Empleado y Alumno, en futuro se implementara tambien para crear Administradores
+![nuevo_usuario_admin](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/nuevo_usuario_admin.png)
+- Usuarios - vista accesible desde panel de administrador que permite ver y editar a todos los usuarios de tipo Alumno y Empleado
+![usuarios_admin](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas/usuarios_admin.png)
+
+**Diagrama de clases de la aplicacion**
+![class_diagram](https://github.com/yarosdytko/BiblioBooking/blob/master/diagrama%20de%20clases.png)
+
+**Diagrama entidad relacion de BBDD**
+![diagrama_bbdd](https://github.com/yarosdytko/BiblioBooking/blob/master/bbdd_esquema.png)
