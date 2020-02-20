@@ -12,28 +12,30 @@ public class Empleado {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long idEmpleado;
 	
-	private String nombre;
+	private String name;
 	private String apellido;
 	private String userName;
+	private String email;
 	private String password;
 	
 	public Empleado() {
 		
 	}
 	
-	public Empleado(String nombre, String apellido, String userName,String password) {
-		this.nombre=nombre;
+	public Empleado(String nombre, String apellido, String userName, String email,String password) {
+		this.name=nombre;
 		this.apellido=apellido;
 		this.userName=userName;
+		this.email=email;
 		this.password=password;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String nombre) {
+		this.name = nombre;
 	}
 
 	public String getApellido() {
@@ -58,5 +60,13 @@ public class Empleado {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 }

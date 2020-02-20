@@ -1,9 +1,12 @@
 package es.code.urjc.BiblioBookingProject;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -11,13 +14,16 @@ public class Alumno {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long numExpediende;
+	private long numExpediente;
 	
 	private String name;
 	private String apellido;
 	private String userName;
 	private String email;
 	private String password;
+	
+	@OneToMany
+	private List<Reserva> reservas;
 	
 	public Alumno() {
 		
@@ -69,6 +75,10 @@ public class Alumno {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public int getReservas() {
+		return reservas.size();
 	}
 }
 

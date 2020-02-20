@@ -6,6 +6,28 @@
 </head>
 <body>
 	<h2>Editando reserva {{idReserva}}</h2>
-	<a href="/gestion/reservas"><button>Atras</button></a>
+	<a href="{{ruta}}"><button>Atras</button></a>
+	<table>
+		<thead>
+			<tr>
+				<td>ID reserva</td>
+				<td>Numero sala</td>
+				<td>Nombre</td>
+				<td>Apellido</td>
+				<td>Fecha</td>
+				<td>Hora</td>
+			</tr>
+		</thead>
+		<tbody>
+		{{#reserva}}
+			<tr>
+			<td>{{idReserva}}</td>
+			<td>{{salaReservada.numeroSala}}</td>
+			<td contenteditable='true'>{{fecha}}</td>
+			<td contenteditable='true'>{{hora}}</td>
+			<td><a href="{{ruta}}/guardar{{&idReserva}}&{{&fecha}}&{{&hora}}"><button>Guardar</button></a></td>
+		{{/reserva}}
+		</tbody>
+	</table>
 </body>
 </html>

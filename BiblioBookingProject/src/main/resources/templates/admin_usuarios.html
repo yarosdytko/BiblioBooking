@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/tabla.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+			  <li><a href="/">Inicio</a></li>
+			  <li><a href="/informacion">Informacion</a></li>
+			  <li><a href="/reservas">Mis reservas</a></li>
+			  <li><a href="/perfil">Mi perfil</a></li>
+			  <li><a href="/login">Login</a></li>
+			  <li><a href="/register">Registrarse</a></li>
+			  <li><a href="/admin">Panel Administrador</a></li>
+			  <li><a href="/gestion">Gestion</a></li>
+			</ul>
+		</nav>
+		<section>
+		<a href="/admin/usuarios/nuevo_usuario"><button>Nuevo usuario</button></a>
+		<a href="/admin"><button>Atras</button></a>
+		<p>Total Empleados: {{totalEmpleados}}</p>
+			{{#tablaEmpleados}}
+			<table>
+				<thead>
+					<tr>
+						<td>ID empleado</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Nombre usuario</td>
+						<td>Email</td>
+						<td>Estado</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#empleado}}
+						<tr>
+							<td>{{idEmpleado}}</td>
+							<td>{{name}}</td>
+							<td>{{apellido}}</td>
+							<td>{{userName}}</td>
+							<td></td>
+							<td></td>
+							<td><a href="/admin/usuarios/editar_empleado{{&idEmpleado}}"><button>Editar</button></a></td>
+							<td><a href="/admin/usuarios/eliminar_empleado{{&idEmpleado}}"><button>Eliminar</button></a></td>
+							<td><a href="/admin/usuarios/bloquear_empleado{{&idEmpleado}}"><button>Bloquear</button></a></td>
+						</tr>
+					{{/empleado}}
+				</tbody>
+			</table>
+			{{/tablaEmpleados}}
+			<hr>
+		<p>Total Alumnos: {{totalAlumnos}}</p>
+			{{#tablaAlumnos}}
+			<table>
+				<thead>
+					<tr>
+						<td>Expediente</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Nombre de usuario</td>
+						<td>Email</td>
+						<td>Estado</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#alumno}}
+						<tr>
+							<td>{{numExpediente}}</td>
+							<td>{{name}}</td>
+							<td>{{apellido}}</td>
+							<td>{{userName}}</td>
+							<td>{{email}}</td>
+							<td></td>
+							<td><a href="/admin/usuarios/editar_alumno{{&numExpediente}}"><button>Editar</button></a></td>
+							<td><a href="/admin/usuarios/eliminar_alumno{{&numExpediente}}"><button>Eliminar</button></a></td>
+							<td><a href="/admin/usuarios/bloquear_alumno{{&numExpediente}}"><button>Bloquear</button></a></td>
+						</tr>
+					{{/alumno}}
+				</tbody>
+			</table>
+			{{/tablaAlumnos}}
+		</section>
+	</main>
+</body>
+</html>

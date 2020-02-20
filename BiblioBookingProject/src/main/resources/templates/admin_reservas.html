@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/tabla.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/tabla.css">
 <title>BiblioBooking</title>
 </head>
 <body>
@@ -24,8 +24,9 @@
 			</ul>
 		</nav>
 		<section>
-			<a href="/reservas/reservar"><button>Nueva reserva</button></a>
-			<p>Total reservas: {{totalReservas}}</p>
+		<a href="/admin/reservas/nueva_reserva"><button>Nueva reserva</button></a>
+		<a href="/admin"><button>Atras</button></a>
+		<p>Total reservas: {{totalReservas}}</p>
 			{{#tablaReservas}}
 			<table>
 				<thead>
@@ -47,8 +48,8 @@
 							<td>{{alumno.apellido}}</td>
 							<td>{{fecha}}</td>
 							<td>{{hora}}</td>
-							<td><a href="/reservas/editar{{&idReserva}}"><button>Editar</button></a></td>
-							<td><a href="/reservas/eliminar{{&idReserva}}"><button>Eliminar</button></a></td>
+							<td><a href="/admin/reservas/editar{{&idReserva}}"><button>Editar</button></a></td>
+							<td><a href="/admin/reservas/eliminar{{&idReserva}}"><button>Eliminar</button></a></td>
 						</tr>
 					{{/reserva}}
 				</tbody>

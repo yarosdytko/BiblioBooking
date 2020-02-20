@@ -8,5 +8,6 @@ public interface AlumnosRepository extends JpaRepository<Alumno, Long> {
 	Alumno findByUserNameAndApellido(String userName, String apellido);
 	Alumno findByUserNameAndPassword(String userName, String password);
 	Alumno findByUserName(String userName);
+	boolean existsByNameAndApellido(String name, String apellido);
 	
 }

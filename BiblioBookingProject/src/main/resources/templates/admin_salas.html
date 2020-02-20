@@ -24,8 +24,8 @@
 			</ul>
 		</nav>
 		<section>
-		<a href="/gestion/salas/nueva_sala"><button>Nueva sala</button></a>
-		<a href="/gestion"><button>Atras</button></a>
+		<a href="/admin/salas/nueva_sala"><button>Nueva sala</button></a>
+		<a href="/admin"><button>Atras</button></a>
 		<p>Total salas: {{totalSalas}}</p>
 			{{#tablaSalas}}
 			<table>
@@ -44,8 +44,8 @@
 							<td>{{capacidadMaxima}}</td>
 							<td>{{numeroMesas}}</td>
 							<td>{{numeroSillas}}</td>
-							<td><a href="/gestion/salas/editar{{&numeroSala}}"><button>Editar</button></a></td>
-							<td><a href="/gestion/salas/eliminar{{&numeroSala}}"><button>Eliminar</button></a></td>
+							<td><a href="/admin/salas/editar{{&numeroSala}}"><button>Editar</button></a></td>
+							<td><a href="/admin/salas/eliminar{{&numeroSala}}"><button>Eliminar</button></a></td>
 						</tr>
 					{{/sala}}
 				</tbody>

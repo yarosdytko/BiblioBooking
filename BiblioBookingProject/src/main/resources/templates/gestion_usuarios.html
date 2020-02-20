@@ -24,33 +24,36 @@
 			</ul>
 		</nav>
 		<section>
-		<a href="/gestion/salas/nueva_sala"><button>Nueva sala</button></a>
 		<a href="/gestion"><button>Atras</button></a>
-		<p>Total salas: {{totalSalas}}</p>
-			{{#tablaSalas}}
+		<p>Total Alumnos: {{totalAlumnos}}</p>
+			{{#tablaAlumnos}}
 			<table>
 				<thead>
 					<tr>
-						<td>Numero sala</td>
-						<td>Capacidad</td>
-						<td>Mesas</td>
-						<td>Sillas</td>
+						<td>Expediente</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Nombre de usuario</td>
+						<td>Email</td>
+						<td>Estado</td>
 					</tr>
 				</thead>
 				<tbody>
-					{{#sala}}
+					{{#alumno}}
 						<tr>
-							<td>{{numeroSala}}</td>
-							<td>{{capacidadMaxima}}</td>
-							<td>{{numeroMesas}}</td>
-							<td>{{numeroSillas}}</td>
-							<td><a href="/gestion/salas/editar{{&numeroSala}}"><button>Editar</button></a></td>
-							<td><a href="/gestion/salas/eliminar{{&numeroSala}}"><button>Eliminar</button></a></td>
+							<td>{{numExpediente}}</td>
+							<td>{{name}}</td>
+							<td>{{apellido}}</td>
+							<td>{{userName}}</td>
+							<td>{{email}}</td>
+							<td><a href="/gestion/usuarios/editar{{&numExpediente}}"><button>Editar</button></a></td>
+							<td><a href="/gestion/usuarios/eliminar{{&numExpediente}}"><button>Eliminar</button></a></td>
+							<td><a href="/gestion/usuarios/bloquear{{&numExpediente}}"><button>Bloquear</button></a></td>
 						</tr>
-					{{/sala}}
+					{{/alumno}}
 				</tbody>
 			</table>
-			{{/tablaSalas}}
+			{{/tablaAlumnos}}
 		</section>
 	</main>
 </body>

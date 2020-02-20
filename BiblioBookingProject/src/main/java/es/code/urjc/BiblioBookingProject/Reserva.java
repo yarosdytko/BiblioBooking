@@ -34,6 +34,11 @@ public class Reserva {
 		this.hora = hora;
 	}
 	
+	public void updateReserva(String hora, String fecha) {
+		this.setHora(hora);
+		this.setFecha(fecha);
+	}
+	
 	public Sala getSalaReservada() {
 		return salaReservada;
 	}
