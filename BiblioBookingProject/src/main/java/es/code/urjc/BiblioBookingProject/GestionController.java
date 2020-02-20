@@ -1,7 +1,5 @@
 package es.code.urjc.BiblioBookingProject;
 
-import javax.annotation.PostConstruct;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,20 +19,6 @@ public class GestionController {
 	
 	@Autowired
 	private SalasRepository salas;
-	
-	@PostConstruct
-	public void init() {
-		Alumno alumno = new Alumno("Yaroslav","Dytko","y.dytko","y.dytko.2017@alumnos.urjc.es","1234");
-		alumnos.save(alumno);
-		Sala sala = new Sala(1,10,2,5);
-		Sala sala2 = new Sala(2,10,4,8);
-		salas.save(sala);
-		salas.save(sala2);
-		reservas.save(new Reserva(sala,alumno,"2020-02-22","10:20"));
-		reservas.save(new Reserva(sala,alumno,"2020-02-22","13:20"));
-		
-	}
-	
 
 	@RequestMapping("/gestion")
 	public String gestion() {

@@ -11,10 +11,9 @@ public class UserController {
 	@Autowired
 	private AlumnosRepository alumnos;
 
-	
 	@RequestMapping("/perfil")
 	public String perfil(Model model) {
-		Alumno alumno = alumnos.findByNameAndApellido("Yaroslav", "Dytko");
+		Alumno alumno = alumnos.findByNameAndApellido("Julio", "Ruiz");
 		model.addAttribute("nombre",alumno.getName());
 		model.addAttribute("apellido",alumno.getApellido());
 		model.addAttribute("userName",alumno.getUserName());
@@ -23,5 +22,4 @@ public class UserController {
 		return "perfil";
 	}
 	
-
 }
