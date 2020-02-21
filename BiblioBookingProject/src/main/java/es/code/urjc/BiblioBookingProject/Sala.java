@@ -20,7 +20,7 @@ public class Sala {
 	private int numeroMesas;
 	private int numeroSillas;
 	
-	@OneToMany
+	@OneToMany(mappedBy = "sala")
 	private List<Reserva> reservas;
 	
 	public Sala() {

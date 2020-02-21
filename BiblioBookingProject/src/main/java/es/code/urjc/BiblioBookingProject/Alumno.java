@@ -8,13 +8,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
 @Entity
 public class Alumno {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long numExpediente;
+	private long expediente;
 	
 	private String name;
 	private String apellido;
@@ -22,7 +21,7 @@ public class Alumno {
 	private String email;
 	private String password;
 	
-	@OneToMany
+	@OneToMany (mappedBy = "alumno")
 	private List<Reserva> reservas;
 	
 	public Alumno() {

@@ -24,33 +24,37 @@
 			</ul>
 		</nav>
 		<section>
-		<a href="/admin/salas/nueva_sala"><button>Nueva sala</button></a>
-		<a href="/admin"><button>Atras</button></a>
-		<p>Total salas: {{totalSalas}}</p>
-			{{#tablaSalas}}
+		<a href="/{{ruta}}/reservas/nueva_reserva"><button>Nueva reserva</button></a>
+		<a href="/{{ruta}}"><button>Atras</button></a>
+		<p>Total reservas: {{totalReservas}}</p>
+			{{#tablaReservas}}
 			<table>
 				<thead>
 					<tr>
+						<td>ID reserva</td>
 						<td>Numero sala</td>
-						<td>Capacidad</td>
-						<td>Mesas</td>
-						<td>Sillas</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Fecha</td>
+						<td>Hora</td>
 					</tr>
 				</thead>
 				<tbody>
-					{{#sala}}
+					{{#reserva}}
 						<tr>
-							<td>{{numeroSala}}</td>
-							<td>{{capacidadMaxima}}</td>
-							<td>{{numeroMesas}}</td>
-							<td>{{numeroSillas}}</td>
-							<td><a href="/admin/salas/editar{{&numeroSala}}"><button>Editar</button></a></td>
-							<td><a href="/admin/salas/eliminar{{&numeroSala}}"><button>Eliminar</button></a></td>
+							<td>{{idReserva}}</td>
+							<td>{{salaReservada.numeroSala}}</td>
+							<td>{{alumno.name}}</td>
+							<td>{{alumno.apellido}}</td>
+							<td>{{fecha}}</td>
+							<td>{{hora}}</td>
+							<td><a href="/{{ruta}}/reservas/editar{{&idReserva}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/reservas/eliminar{{&idReserva}}"><button>Eliminar</button></a></td>
 						</tr>
-					{{/sala}}
+					{{/reserva}}
 				</tbody>
 			</table>
-			{{/tablaSalas}}
+			{{/tablaReservas}}
 		</section>
 	</main>
 </body>

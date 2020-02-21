@@ -24,20 +24,21 @@ public class AdminController {
 	private EmpleadosRepository empleados;
 	
 	@RequestMapping("/admin")
-	public String admin() {
-		return "admin";
+	public String admin(Model model) {
+		model.addAttribute("ruta", "admin");
+		return "control_template";
 	}
 	
 	@RequestMapping("/admin/reservas")
 	public String reservas(Model model) {
-		
+		model.addAttribute("ruta", "admin");
 		int totalReservas = (int) reservas.count();
 		model.addAttribute("totalReservas",totalReservas);
 		if(totalReservas>0) {
 			model.addAttribute("tablaReservas",true);
 			model.addAttribute("reserva",reservas.findAll());
 		}
-		return "admin_reservas";
+		return "reservas_template";
 	}
 	
 	@RequestMapping("/admin/reservas/nueva_reserva")
@@ -71,6 +72,8 @@ public class AdminController {
 	
 	@RequestMapping("/admin/usuarios")
 	public String usuarios(Model model) {
+		model.addAttribute("ruta","admin");
+		model.addAttribute("isAdmin",true);
 		int totalEmpleados = (int) empleados.count();
 		model.addAttribute("totalEmpleados",totalEmpleados);
 		if(totalEmpleados>0) {
@@ -86,7 +89,7 @@ public class AdminController {
 			model.addAttribute("alumno",alumnos.findAll());
 		}
 		
-		return "admin_usuarios";
+		return "usuarios_template";
 	}
 	
 	@RequestMapping("/admin/usuarios/nuevo_usuario")
@@ -123,6 +126,7 @@ public class AdminController {
 	
 	@RequestMapping("/admin/salas")
 	public String salas(Model model) {
+		model.addAttribute("ruta", "admin");
 		int totalSalas = (int) salas.count();
 		model.addAttribute("totalSalas",totalSalas);
 		if(totalSalas>0) {
@@ -130,7 +134,7 @@ public class AdminController {
 			model.addAttribute("sala",salas.findAll());
 		}
 		
-		return "admin_salas";
+		return "salas_template";
 	}
 	
 	@RequestMapping("/admin/salas/nueva_sala")

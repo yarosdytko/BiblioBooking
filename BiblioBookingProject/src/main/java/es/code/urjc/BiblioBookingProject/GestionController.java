@@ -21,20 +21,21 @@ public class GestionController {
 	private SalasRepository salas;
 
 	@RequestMapping("/gestion")
-	public String gestion() {
-		return "gestion";
+	public String gestion(Model model) {
+		model.addAttribute("ruta", "gestion");
+		return "control_template";
 	}
 	
 	@RequestMapping("/gestion/reservas")
 	public String reservas(Model model) {
-		
+		model.addAttribute("ruta", "gestion");
 		int totalReservas = (int) reservas.count();
 		model.addAttribute("totalReservas",totalReservas);
 		if(totalReservas>0) {
 			model.addAttribute("tablaReservas",true);
 			model.addAttribute("reserva",reservas.findAll());
 		}
-		return "gestion_reservas";
+		return "reservas_template";
 	}
 	
 	@RequestMapping("/gestion/reservas/nueva_reserva")
@@ -68,7 +69,7 @@ public class GestionController {
 	
 	@RequestMapping("/gestion/salas")
 	public String salas(Model model) {
-		
+		model.addAttribute("ruta", "gestion");
 		int totalSalas = (int) salas.count();
 		model.addAttribute("totalSalas",totalSalas);
 		if(totalSalas>0) {
@@ -76,7 +77,7 @@ public class GestionController {
 			model.addAttribute("sala",salas.findAll());
 		}
 		
-		return "gestion_salas";
+		return "salas_template";
 	}
 	
 	@RequestMapping("/gestion/salas/nueva_sala")
@@ -109,7 +110,8 @@ public class GestionController {
 	
 	@RequestMapping("/gestion/usuarios")
 	public String usuarios(Model model) {
-		
+		model.addAttribute("ruta","gestion");
+		model.addAttribute("isAdmin",false);
 		int totalAlumnos = (int) alumnos.count();
 		model.addAttribute("totalAlumnos",totalAlumnos);
 		if(totalAlumnos>0) {
@@ -117,7 +119,7 @@ public class GestionController {
 			model.addAttribute("alumno",alumnos.findAll());
 		}
 		
-		return "gestion_usuarios";
+		return "usuarios_template";
 	}
 	
 	@RequestMapping("/gestion/usuarios/eliminar{numExpediente}")

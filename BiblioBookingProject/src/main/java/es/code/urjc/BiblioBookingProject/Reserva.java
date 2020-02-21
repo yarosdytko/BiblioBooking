@@ -15,7 +15,7 @@ public class Reserva {
 	private long idReserva;
 	
 	@OneToOne
-	private Sala salaReservada;
+	private Sala sala;
 	
 	@ManyToOne
 	private Alumno alumno;
@@ -28,7 +28,7 @@ public class Reserva {
 	}
 	
 	public Reserva(Sala sala, Alumno alumno, String fecha, String hora) {
-		this.salaReservada = sala;
+		this.sala = sala;
 		this.alumno = alumno;
 		this.fecha = fecha;
 		this.hora = hora;
@@ -40,11 +40,11 @@ public class Reserva {
 	}
 	
 	public Sala getSalaReservada() {
-		return salaReservada;
+		return sala;
 	}
 
-	public void setSalaReservada(Sala salaReservada) {
-		this.salaReservada = salaReservada;
+	public void setSalaReservada(Sala sala) {
+		this.sala = sala;
 	}
 
 	public Alumno getAlumno() {

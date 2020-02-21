@@ -24,14 +24,13 @@
 			</ul>
 		</nav>
 		<section>
-		<a href="/admin/usuarios/nuevo_usuario"><button>Nuevo usuario</button></a>
-		<a href="/admin"><button>Atras</button></a>
-		<p>Total Empleados: {{totalEmpleados}}</p>
+		<a href="/{{ruta}}/usuarios/nuevo_usuario"><button>Nuevo usuario</button></a>
+		<a href="/{{ruta}}"><button>Atras</button></a>
+			{{#isAdmin}}<p>Total Empleados: {{totalEmpleados}}</p>
 			{{#tablaEmpleados}}
 			<table>
 				<thead>
 					<tr>
-						<td>ID empleado</td>
 						<td>Nombre</td>
 						<td>Apellido</td>
 						<td>Nombre usuario</td>
@@ -41,20 +40,21 @@
 				<tbody>
 					{{#empleado}}
 						<tr>
-							<td>{{idEmpleado}}</td>
 							<td>{{name}}</td>
 							<td>{{apellido}}</td>
 							<td>{{userName}}</td>
 							<td>{{email}}</td>
-							<td><a href="/admin/usuarios/editar_empleado{{&idEmpleado}}"><button>Editar</button></a></td>
-							<td><a href="/admin/usuarios/eliminar_empleado{{&idEmpleado}}"><button>Eliminar</button></a></td>
-							<td><a href="/admin/usuarios/bloquear_empleado{{&idEmpleado}}"><button>Bloquear</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/editar_empleado{{&idEmpleado}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_empleado{{&idEmpleado}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/bloquear_empleado{{&idEmpleado}}"><button>Bloquear</button></a></td>
 						</tr>
 					{{/empleado}}
 				</tbody>
 			</table>
-			{{/tablaEmpleados}}
 			<hr>
+			{{/tablaEmpleados}}
+			{{/isAdmin}}
+			
 		<p>Total Alumnos: {{totalAlumnos}}</p>
 			{{#tablaAlumnos}}
 			<table>
@@ -71,15 +71,15 @@
 				<tbody>
 					{{#alumno}}
 						<tr>
-							<td>{{numExpediente}}</td>
+							<td>{{expediente}}</td>
 							<td>{{name}}</td>
 							<td>{{apellido}}</td>
 							<td>{{userName}}</td>
 							<td>{{email}}</td>
 							<td></td>
-							<td><a href="/admin/usuarios/editar_alumno{{&numExpediente}}"><button>Editar</button></a></td>
-							<td><a href="/admin/usuarios/eliminar_alumno{{&numExpediente}}"><button>Eliminar</button></a></td>
-							<td><a href="/admin/usuarios/bloquear_alumno{{&numExpediente}}"><button>Bloquear</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/editar_alumno{{&expediente}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_alumno{{&expediente}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/bloquear_alumno{{&expediente}}"><button>Bloquear</button></a></td>
 						</tr>
 					{{/alumno}}
 				</tbody>
