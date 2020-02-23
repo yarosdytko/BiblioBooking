@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 public class Sala {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private long idSala;
 	
 	private int numeroSala;

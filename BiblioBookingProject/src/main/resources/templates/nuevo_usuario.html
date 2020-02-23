@@ -24,17 +24,18 @@
 			</ul>
 		</nav>
 		<section>
-			<form action="/admin/usuarios/nuevo_usuario/registrar" method="POST" class="registerForm">
+			<form action="/{{ruta}}/usuarios/nuevo_usuario/registrar" method="POST" class="registerForm">
 			<div class="cont">
 				<label for="tipoUsuario">Tipo de usuario</label><br>
 				<select name="tipoUsuario">
 					<option value="Empleado">Empleado</option>
 					<option value="Alumno">Alumno</option>
+					<option value="Administrador">Administrador</option>
 				</select><br>
 				<label for="nombre"><b>Nombre</b></label>
 				<input type="text" placeholder="nombre" name="nombre" required></input><br>
 				
-				<label for="apelldido"><b>Apellido</b></label>
+				<label for="apellido"><b>Apellido</b></label>
 				<input type="text" placeholder="Apellido" name="apellido" required></input><br>
 				
 				<label for="uname"><b>Nombre de usuario</b></label>
@@ -49,7 +50,7 @@
 				<button type="submit">Confirmar</button>
 			</div>
 			</form>
-			<div class="registerForm"><a href="/admin/usuarios"><button>Volver</button></a></div>	
+			<div class="registerForm"><a href="/{{ruta}}/usuarios"><button>Volver</button></a></div>	
 		</section>
 	</main>
 </body>

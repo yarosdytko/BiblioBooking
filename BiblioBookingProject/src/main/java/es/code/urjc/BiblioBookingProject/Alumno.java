@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 public class Alumno {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private long expediente;
 	
 	private String name;
@@ -20,6 +20,7 @@ public class Alumno {
 	private String userName;
 	private String email;
 	private String password;
+	private boolean bloqueado = false;
 	
 	@OneToMany (mappedBy = "alumno")
 	private List<Reserva> reservas;
@@ -78,6 +79,14 @@ public class Alumno {
 	
 	public int getReservas() {
 		return reservas.size();
+	}
+
+	public boolean isBloqueado() {
+		return bloqueado;
+	}
+
+	public void setBloqueado(boolean bloqueado) {
+		this.bloqueado = bloqueado;
 	}
 }
 

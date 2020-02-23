@@ -38,6 +38,14 @@
 				
 				<label for="apellido"><b>Apellido</b></label>
 				<input type="text" name="apellido" required></input> 
+				
+				<label for="numSala"><b>Numero de sala</b></label><br>
+				<select name="numSala">
+					{{#sala}}
+						<option value="{{numeroSala}}">{{numeroSala}}</option>
+					{{/sala}}
+				</select>
+				<br>
 				<button type="submit">Confirmar</button>
 			</div>
 			</form>

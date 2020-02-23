@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/tabla.css">
+<style type="text/css">
+input {
+	width: 100%;
+	margin: 0px;
+	border: none;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Editando usuario {{nombre}} {{apellido}}</h2>
+	<a href="/{{ruta}}/usuarios"><button>Atras</button></a><br><br>
+	<form action="/{{ruta}}/usuarios/editar_alumno{{&expediente}}/guardar" method="post">
+	<table>
+		<thead>
+			<tr>
+				<td>Expediente</td>
+				<td>Nombre</td>
+				<td>Apellido</td>
+				<td>Nombre usuario</td>
+				<td>Email</td>
+				<td>Bloqueado</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+
+				<td>{{expediente}}</td>
+				<td><input type="text" name="nombre" value="{{nombre}}"></td>
+				<td><input type="text" name="apellido" value="{{apellido}}"></td>
+				<td><input type="text" name="userName" value="{{userName}}"></td>
+				<td><input type="text" name="email" value="{{email}}"></td>
+				<td>{{bloqueado}}</td>
+				<td><button type="submit">Guardar</button></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+</body>
+</html>

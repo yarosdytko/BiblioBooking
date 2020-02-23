@@ -9,31 +9,34 @@ import javax.persistence.Id;
 public class Administrador {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue (strategy = GenerationType.AUTO)
 	private long idAdmin;
 	
-	private String nombre;
+	private String name;
+
 	private String apellido;
 	private String userName;
+	private String email;
 	private String password;
 	
 	public Administrador() {
 		
 	}
 	
-	public Administrador(String nombre, String apellido, String userName, String password) {
-		this.nombre=nombre;
+	public Administrador(String nombre, String apellido, String userName, String email, String password) {
+		this.name=nombre;
 		this.apellido=apellido;
+		this.email=email;
 		this.userName=userName;
 		this.password=password;
 	}
-
-	public String getNombre() {
-		return nombre;
+	
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getApellido() {
@@ -64,7 +67,15 @@ public class Administrador {
 	  public String toString() {
 	    return String.format(
 	        "Customer[id=%d, firstName='%s', lastName='%s', username='%s']",
-	        idAdmin, nombre, apellido, userName);
+	        idAdmin, name, apellido, userName);
 	  }
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 }

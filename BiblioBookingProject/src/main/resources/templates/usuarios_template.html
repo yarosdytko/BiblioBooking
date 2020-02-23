@@ -26,27 +26,54 @@
 		<section>
 		<a href="/{{ruta}}/usuarios/nuevo_usuario"><button>Nuevo usuario</button></a>
 		<a href="/{{ruta}}"><button>Atras</button></a>
-			{{#isAdmin}}<p>Total Empleados: {{totalEmpleados}}</p>
-			{{#tablaEmpleados}}
+			{{#isAdmin}}<p>Total Administradores: {{totalAdministradores}}</p>
+			{{#tablaAdministradores}}
 			<table>
 				<thead>
 					<tr>
 						<td>Nombre</td>
 						<td>Apellido</td>
-						<td>Nombre usuario</td>
+						<td>Nombre de usuario</td>
+						<td>Email</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#administrador}}
+						<tr>
+							<td>{{name}}</td>
+							<td>{{apellido}}</td>
+							<td>{{userName}}</td>
+							<td>{{email}}</td>
+							<td><a href="/{{ruta}}/usuarios/editar_admin{{&idAdmin}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_admin{{&idAdmin}}"><button>Eliminar</button></a></td>
+						</tr>
+					{{/administrador}}
+				</tbody>
+			</table>
+			{{/tablaAdministradores}}
+			<hr>
+			<p>Total Empleados: {{totalEmpleados}}</p>
+			{{#tablaEmpleados}}
+			<table>
+				<thead>
+					<tr>
+						<td>idEmpleado</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Nombre de usuario</td>
 						<td>Email</td>
 					</tr>
 				</thead>
 				<tbody>
 					{{#empleado}}
 						<tr>
+							<td>{{idEmpleado}}</td>
 							<td>{{name}}</td>
 							<td>{{apellido}}</td>
 							<td>{{userName}}</td>
 							<td>{{email}}</td>
 							<td><a href="/{{ruta}}/usuarios/editar_empleado{{&idEmpleado}}"><button>Editar</button></a></td>
 							<td><a href="/{{ruta}}/usuarios/eliminar_empleado{{&idEmpleado}}"><button>Eliminar</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/bloquear_empleado{{&idEmpleado}}"><button>Bloquear</button></a></td>
 						</tr>
 					{{/empleado}}
 				</tbody>
@@ -65,7 +92,7 @@
 						<td>Apellido</td>
 						<td>Nombre de usuario</td>
 						<td>Email</td>
-						<td>Estado</td>
+						<td>Bloqeado</td>
 					</tr>
 				</thead>
 				<tbody>
@@ -76,10 +103,11 @@
 							<td>{{apellido}}</td>
 							<td>{{userName}}</td>
 							<td>{{email}}</td>
-							<td></td>
+							<td>{{bloqueado}}</td>
 							<td><a href="/{{ruta}}/usuarios/editar_alumno{{&expediente}}"><button>Editar</button></a></td>
 							<td><a href="/{{ruta}}/usuarios/eliminar_alumno{{&expediente}}"><button>Eliminar</button></a></td>
 							<td><a href="/{{ruta}}/usuarios/bloquear_alumno{{&expediente}}"><button>Bloquear</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/desbloquear_alumno{{&expediente}}"><button>Desbloquear</button></a></td>
 						</tr>
 					{{/alumno}}
 				</tbody>
