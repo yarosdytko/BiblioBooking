@@ -16,13 +16,13 @@ public interface AlumnosRepository extends JpaRepository<Alumno, Long> {
 	boolean existsByNameAndApellido(String name, String apellido);
 	
 	@Modifying
-	@Query("UPDATE Alumno a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE expediente = ?5")
+	@Query("UPDATE Alumno a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE a.expediente = ?5")
 	@Transactional
 	void actualizarAlumno(String name, String apellido, String userName, String email, long expediente);
-	
+
 	@Modifying
-	@Query("UPDATE Alumno a SET a.bloqueado = ?1 WHERE expediente = ?2")
+	@Query("UPDATE Alumno a SET a.bloqueado = ?1 WHERE a.expediente = ?2")
 	@Transactional
 	void bloqueoAlumno(boolean bloqueado, long expediente);
-	
+
 }

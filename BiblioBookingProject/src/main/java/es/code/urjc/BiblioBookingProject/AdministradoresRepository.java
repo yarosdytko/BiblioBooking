@@ -12,7 +12,7 @@ public interface AdministradoresRepository extends JpaRepository<Administrador, 
 	boolean existsByNameAndApellido(String name, String apellido);
 	
 	@Modifying
-	@Query("UPDATE Administrador a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE idAdmin = ?5")
+	@Query("UPDATE Administrador a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE a.idAdmin = ?5")
 	@Transactional
 	void actualizarAdmin(String name, String apellido, String userName, String email, long idAdmin);
 	

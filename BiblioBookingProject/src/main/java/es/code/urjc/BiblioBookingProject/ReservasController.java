@@ -18,7 +18,7 @@ public class ReservasController {
 	
 	@RequestMapping("/reservas")
 	public String reservas(Model model) {
-		Alumno alumno = alumnos.findByNameAndApellido("Julio", "Ruiz");
+		Alumno alumno = alumnos.findByNameAndApellido("Fernando", "Ozores");
 		int totalReservas = (int) reservas.countByAlumno(alumno);
 		
 		model.addAttribute("totalReservas",totalReservas);

@@ -10,7 +10,7 @@ public interface EmpleadosRepository extends JpaRepository<Empleado, Long> {
 	boolean existsByNameAndApellido(String name, String apellido);
 	
 	@Modifying
-	@Query("UPDATE Empleado a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE idEmpleado = ?5")
+	@Query("UPDATE Empleado a SET a.name = ?1, a.apellido = ?2, a.userName = ?3 , a.email = ?4 WHERE a.idEmpleado = ?5")
 	@Transactional
 	void actualizarEmpleado(String name, String apellido, String userName, String email, long idEmpleado);
 }

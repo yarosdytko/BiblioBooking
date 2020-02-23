@@ -13,7 +13,7 @@ public class UserController {
 
 	@RequestMapping("/perfil")
 	public String perfil(Model model) {
-		Alumno alumno = alumnos.findByNameAndApellido("Julio", "Ruiz");
+		Alumno alumno = alumnos.findByNameAndApellido("Fernando", "Ozores");
 		model.addAttribute("nombre",alumno.getName());
 		model.addAttribute("apellido",alumno.getApellido());
 		model.addAttribute("userName",alumno.getUserName());
