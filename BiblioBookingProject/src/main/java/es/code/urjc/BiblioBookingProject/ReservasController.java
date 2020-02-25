@@ -26,7 +26,7 @@ public class ReservasController {
 			model.addAttribute("tablaReservas",true);
 			model.addAttribute("reserva",reservas.findByAlumno(alumno));
 		}
-		return "reservas";
+		return "misreservas_template";
 	}
 	
 	@RequestMapping("/reservas/nueva_reserva")
@@ -50,7 +50,7 @@ public class ReservasController {
 		model.addAttribute("ruta","/reservas");
 		model.addAttribute("reserva",r);
 		
-		return "editarReserva";
+		return "editar_reserva_template";
 	}
 	
 	@RequestMapping("{ruta}/guardar{idReserva}&{fecha}&{hora}")

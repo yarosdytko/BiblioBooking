@@ -56,7 +56,7 @@ public class GestionController {
 		
 		model.addAttribute("idReserva", idReserva);
 		model.addAttribute("ruta","/gestion/reservas");
-		return "editarReserva";
+		return "editar_reserva_template";
 	}
 	
 	@RequestMapping("/gestion/reservas/eliminar{idReserva}")

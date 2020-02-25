@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
+
 public class AdminController {
 	@Autowired
 	private AdministradoresRepository administradores;
@@ -62,11 +63,18 @@ public class AdminController {
 	}
 	
 	@RequestMapping("/admin/reservas/editar{idReserva}")
-	public String editar(Model model, @PathVariable int idReserva) {
-		
+	public String editar_reserva(Model model, @PathVariable int idReserva) {
+		Reserva r = reservas.findById(idReserva);
+
+		model.addAttribute("ruta", "admin");
 		model.addAttribute("idReserva", idReserva);
+		model.addAttribute("numeroSala",r.getSalaReservada().getNumeroSala());
+		model.addAttribute("nombreAlumno",r.getAlumno().getName());
+		model.addAttribute("apellidoAlumno", r.getAlumno().getApellido());
+		model.addAttribute("fecha",r.getFecha());
+		model.addAttribute("hora",r.getHora());
 		
-		return "editarReserva_admin";
+		return "editar_reserva_gestion_template";
 	}
 	
 	@RequestMapping("/admin/reservas/eliminar{idReserva}")
