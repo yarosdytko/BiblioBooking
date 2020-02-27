@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/register.css">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/register.css">
 <title>BiblioBooking</title>
 </head>
 <body>
@@ -25,10 +25,8 @@
 		</nav>
 		<section>
 			<h3>Registro de alumno</h3>
-			{{#gestion}}
 			<a href="/gestion/usuarios"><button>Volver</button></a>
-			{{/gestion}}
-			<form action="/register/registrar" method="POST" class="registerForm">
+			<form action="/gestion/usuarios/nuevo_usuario/registrar" method="POST" class="registerForm">
 			<div class="cont">
 				<label for="nombre"><b>Nombre</b></label>
 				<input type="text" placeholder="nombre" name="nombre" required></input><br>
@@ -42,8 +40,8 @@
 				<label for="email"><b>Email</b></label>
 				<input type="email" placeholder="Correo electronico" name="email" required></input><br>
 				
-				<label for="psswd"><b>Contraseña</b></label>
-				<input type="password" placeholder="Contraseña" name="passwd" required><br>
+				<label for="password"><b>Contraseña</b></label>
+				<input type="password" placeholder="Contraseña" name="password" required><br>
 				
 				<button type="submit">Confirmar</button>
 			</div>

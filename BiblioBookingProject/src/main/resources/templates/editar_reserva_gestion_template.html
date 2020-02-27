@@ -16,7 +16,7 @@
 <body>
 	<h2>Editando reserva {{idReserva}}</h2>
 	<a href="/{{ruta}}/reservas"><button>Atras</button></a>
-	<form action="{{ruta}}/guardar{{&idReserva}}" method="post">
+	<form action="/{{ruta}}/reservas/editar_reserva{{&idReserva}}/guardar" method="post">
 		<table>
 			<thead>
 				<tr>
@@ -31,11 +31,11 @@
 			<tbody>
 				<tr>
 					<td>{{idReserva}}</td>
-					<td><input type="text" name="numeroSala" value="{{numeroSala}}"></td>
+					<td>{{numeroSala}}</td>
 					<td>{{nombreAlumno}}</td>
 					<td>{{apellidoAlumno}}</td>
-					<td><input type="text" name="fecha" value="{{fecha}}"></td>
-					<td><input type="text" name="hora" value="{{hora}}"></td>
+					<td><input type="date" name="fecha" value="{{fecha}}"></td>
+					<td><input type="time" name="hora" value="{{hora}}"></td>
 					<td><button type="submit">Guardar</button></td>
 				</tr>
 			</tbody>

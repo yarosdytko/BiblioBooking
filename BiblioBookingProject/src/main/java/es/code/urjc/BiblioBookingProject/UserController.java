@@ -5,6 +5,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 public class UserController {
 
@@ -13,11 +15,11 @@ public class UserController {
 
 	@RequestMapping("/perfil")
 	public String perfil(Model model) {
-		Alumno alumno = alumnos.findByNameAndApellido("Fernando", "Ozores");
-		model.addAttribute("nombre",alumno.getName());
-		model.addAttribute("apellido",alumno.getApellido());
-		model.addAttribute("userName",alumno.getUserName());
-		model.addAttribute("email",alumno.getEmail());
+		List<Alumno> a = alumnos.findAll();
+		model.addAttribute("nombre",a.get(0).getName());
+		model.addAttribute("apellido",a.get(0).getApellido());
+		model.addAttribute("userName",a.get(0).getUserName());
+		model.addAttribute("email",a.get(0).getEmail());
 		
 		return "perfil";
 	}

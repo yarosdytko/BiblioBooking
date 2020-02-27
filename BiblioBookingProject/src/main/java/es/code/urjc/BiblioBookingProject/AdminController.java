@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-
 public class AdminController {
 	@Autowired
 	private AdministradoresRepository administradores;
@@ -25,9 +24,7 @@ public class AdminController {
 	
 	@Autowired
 	private SalasRepository salas;
-	
-	
-	
+
 	@RequestMapping("/admin")
 	public String admin(Model model) {
 		model.addAttribute("ruta", "admin");
@@ -36,8 +33,8 @@ public class AdminController {
 	
 //Reservas
 	
-	@RequestMapping("/admin/reservas")
-	public String reservas(Model model) {
+	/*@RequestMapping("/admin/reservas")
+	public String admin_reservas(Model model) {
 		model.addAttribute("ruta", "admin");
 		int totalReservas = (int) reservas.count();
 		model.addAttribute("totalReservas",totalReservas);
@@ -46,23 +43,24 @@ public class AdminController {
 			model.addAttribute("reserva",reservas.findAll());
 		}
 		return "reservas_template";
-	}
+	}*/
 	
-	@RequestMapping("/admin/reservas/nueva_reserva")
+	/*@RequestMapping("/admin/reservas/nueva_reserva")
 	public String nueva_reserva(Model model) {
+		model.addAttribute("ruta","admin");
 		model.addAttribute("sala",salas.findAll());
-		return "nueva_reserva_admin";
-	}
+		return "nueva_reserva";
+	}*/
 	
-	@PostMapping("/admin/reservas/nueva_reserva/reservar")
+	/*@PostMapping("/admin/reservas/nueva_reserva/reservar")
 	public String reservar(Model model, @RequestParam String fecha, @RequestParam String hora, @RequestParam String nombre, @RequestParam String apellido,@RequestParam int numSala ) {
 		//Alumno alumno = alumnos.findByNameAndApellido(nombre, apellido);
 		//Sala sala = salas.findByNumeroSala(numSala);
 		reservas.save(new Reserva(salas.findByNumeroSala(numSala),alumnos.findByNameAndApellido(nombre, apellido),fecha,hora));
 		return "redirect:/admin/reservas";
-	}
+	}*/
 	
-	@RequestMapping("/admin/reservas/editar{idReserva}")
+	/*@RequestMapping("/admin/reservas/editar_reserva{idReserva}")
 	public String editar_reserva(Model model, @PathVariable int idReserva) {
 		Reserva r = reservas.findById(idReserva);
 
@@ -75,15 +73,23 @@ public class AdminController {
 		model.addAttribute("hora",r.getHora());
 		
 		return "editar_reserva_gestion_template";
-	}
+	}*/
+
+	/*@PostMapping("/admin/reservas/editar_reserva{idReserva}/guardar")
+	public String guardar_reserva(@PathVariable int idReserva, @RequestParam String fecha, @RequestParam String hora){
+
+		reservas.updateReserva(fecha,hora,(long) idReserva);
+
+		return "redirect:/admin/reservas";
+	}*/
 	
-	@RequestMapping("/admin/reservas/eliminar{idReserva}")
+	/*@RequestMapping("/admin/reservas/eliminar_reserva{idReserva}")
 	public String eliminar_reserva(@PathVariable int idReserva) {
 		
 		reservas.deleteById((long) idReserva);
 		
 		return "redirect:/admin/reservas";
-	}
+	}*/
 	
 //Usuarios
 	
@@ -159,7 +165,7 @@ public class AdminController {
 	}
 	
 	//Editar alumno
-	@RequestMapping("/admin/usuarios/editar_alumno{expediente}")
+	/*@RequestMapping("/admin/usuarios/editar_alumno{expediente}")
 	public String editar_alumno(Model model,@PathVariable int expediente) {
 		
 		Alumno alu = alumnos.getOne((long) expediente);
@@ -171,39 +177,39 @@ public class AdminController {
 		model.addAttribute("bloqueado",alu.isBloqueado());
 		
 		return "editar_alumno_template";
-	}
+	}*/
 	
-	@PostMapping("/admin/usuarios/editar_alumno{expediente}/guardar")
+	/*@PostMapping("/admin/usuarios/editar_alumno{expediente}/guardar")
 	public String guardar_alumno(@PathVariable int expediente, @RequestParam String nombre , @RequestParam String apellido,@RequestParam String userName,@RequestParam String email) {
 		
 		alumnos.actualizarAlumno(nombre, apellido, userName, email,(long) expediente);
 		
 		return "redirect:/admin/usuarios";
-	}
+	}*/
 	
-	@RequestMapping("/admin/usuarios/bloquear_alumno{expediente}")
+	/*@RequestMapping("/admin/usuarios/bloquear_alumno{expediente}")
 	public String bloquear_alumno(@PathVariable int expediente) {
 		
 		alumnos.bloqueoAlumno(true, expediente);
 		
 		return "redirect:/admin/usuarios";
-	}
+	}*/
 	
-	@RequestMapping("/admin/usuarios/desbloquear_alumno{expediente}")
+	/*@RequestMapping("/admin/usuarios/desbloquear_alumno{expediente}")
 	public String desbloquear_alumno(@PathVariable int expediente) {
 		
 		alumnos.bloqueoAlumno(false, expediente);
 		
 		return "redirect:/admin/usuarios";
-	}
+	}*/
 	
-	@RequestMapping("/admin/usuarios/eliminar_alumno{expediente}")
+	/*@RequestMapping("/admin/usuarios/eliminar_alumno{expediente}")
 	public String eliminar_alumno(@PathVariable int expediente) {
 		
 		alumnos.deleteById((long) expediente);
 		
 		return "redirect:/admin/usuarios";
-	}
+	}*/
 	
 	//Editar admin
 	@RequestMapping("/admin/usuarios/editar_admin{idAdmin}")
@@ -270,7 +276,7 @@ public class AdminController {
 	
 //Salas
 	
-	@RequestMapping("/admin/salas")
+	/*@RequestMapping("/admin/salas")
 	public String salas(Model model) {
 		model.addAttribute("ruta", "admin");
 		int totalSalas = (int) salas.count();
@@ -281,15 +287,15 @@ public class AdminController {
 		}
 		
 		return "salas_template";
-	}
+	}*/
 	
-	@RequestMapping("/admin/salas/nueva_sala")
+	/*@RequestMapping("/admin/salas/nueva_sala")
 	public String nueva_sala(Model model) {
 		model.addAttribute("ruta","admin");
 		return "nueva_sala";
-	}
+	}*/
 	
-	@PostMapping("/admin/salas/nueva_sala/crear")
+	/*@PostMapping("/admin/salas/nueva_sala/crear")
 	public String crear(Model model, @RequestParam int numeroSala, @RequestParam int capacidadMaxima, @RequestParam int numeroMesas, @RequestParam int numeroSillas) {
 		if(!salas.existsByNumeroSala(numeroSala)) {
 			salas.save(new Sala(numeroSala,capacidadMaxima,numeroMesas,numeroSillas));
@@ -298,6 +304,33 @@ public class AdminController {
 			model.addAttribute("ruta","/admin/salas/nueva_sala");
 			return "sala_existe";
 		}
-	}
-	
+	}*/
+
+	/*@RequestMapping("/admin/salas/editar_sala{idSala}")
+	public String editar_sala(Model model, @PathVariable int idSala) {
+		Sala s = salas.getOne((long) idSala);
+
+		model.addAttribute("ruta", "admin");
+		model.addAttribute("sala", s);
+		model.addAttribute("capacidad",s.getCapacidadMaxima());
+		model.addAttribute("mesas",s.getNumeroMesas());
+		model.addAttribute("sillas",s.getNumeroSillas());
+
+		return "editar_sala_template";
+	}*/
+
+	/*@PostMapping("/admin/salas/guardar_sala{idSala}/guardar")
+	public String guardar_sala(@PathVariable int idSala, @RequestParam int capacidad, @RequestParam int mesas, @RequestParam int sillas){
+		salas.updateSala(capacidad,mesas,sillas,(long) idSala);
+
+		return "redirect:/admin/salas";
+	}*/
+
+	/*@RequestMapping("/admin/salas/eliminar_sala{idSala}")
+	public String eliminar_sala(@PathVariable int idSala){
+		salas.deleteById((long) idSala);
+
+		return "redirect:/admin/salas";
+	}*/
+
 }

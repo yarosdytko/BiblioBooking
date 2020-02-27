@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="../../../css/style.css">
-<link rel="stylesheet" type="text/css" href="../../../css/register.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/register.css">
 <title>BiblioBooking</title>
 </head>
 <body>
@@ -25,8 +25,15 @@
 		</nav>
 		<section>
 			<h3>Nueva reserva</h3>
-			<form action="/admin/reservas/nueva_reserva/reservar" method="POST" class="registerForm">
+			<form action="/reservas/nueva_reserva/reservar" method="POST" class="registerForm">
 			<div class="cont">
+				<label for="numSala"><b>Numero de sala</b></label><br>
+				<select name="numSala">
+					{{#sala}}
+					<option value="{{numeroSala}}">{{numeroSala}}</option>
+					{{/sala}}
+				</select>
+				<br>
 				<label for="fecha"><b>Fecha</b></label>
 				<input type="date" name="fecha" required></input><br>
 				
@@ -37,20 +44,13 @@
 				<input type="text" name="nombre" required></input><br>
 				
 				<label for="apellido"><b>Apellido</b></label>
-				<input type="text" name="apellido" required></input> 
-				
-				<label for="numSala"><b>Numero de sala</b></label><br>
-				<select name="numSala">
-					{{#sala}}
-						<option value="{{numeroSala}}">{{numeroSala}}</option>
-					{{/sala}}
-				</select>
+				<input type="text" name="apellido" required></input>
 				<br>
 				<button type="submit">Confirmar</button>
 			</div>
 			</form>
 			<div class="registerForm">
-				<a href="/admin/reservas"><button>Volver</button></a>
+				<a href="/reservas"><button>Volver</button></a>
 			</div>
 		</section>
 	</main>
