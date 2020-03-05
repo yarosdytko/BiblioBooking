@@ -30,7 +30,7 @@
 				<input type="text" placeholder="" name="uname" required>
 				<label for="psswd"><b>Contraseña</b></label>
 				<input type="password" placeholder="" name="passwd" required>
-				
+				<input type="hidden" name="_csrf" value="{{token}}" />
 				<button type="submit">Login</button>
 				<br>
 				{{#userNoOk}}
