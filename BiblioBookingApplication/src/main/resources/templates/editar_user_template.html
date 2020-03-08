@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/tabla.css">
+<style type="text/css">
+input {
+	width: 100%;
+	margin: 0px;
+	border: none;
+}
+</style>
+<title>BiblioBooking</title>
+</head>
+<body>
+	<h2>Editando {{name}} {{lastname}}</h2>
+	<a href="/{{ruta}}/usuarios"><button>Atras</button></a><br><br>
+	<form action="/{{ruta}}/usuarios/editar_{{&user}}/guardar{{&id}}" method="post">
+		<table>
+			<thead>
+				<tr>
+					<td>Nombre</td>
+					<td>Apellido</td>
+					<td>Nombre de usuario</td>
+					<td>Email</td>
+					{{#alumno}}
+					<td>Bloqueado</td>
+					{{/alumno}}
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" name="name" value="{{name}}"/></td>
+					<td><input type="text" name="lastname" value="{{lastname}}"/></td>
+					<td><input type="text" name="username" value="{{username}}"/></td>
+					<td><input type="text" name="email" value="{{email}}"/></td>
+					{{#alumno}}
+					<td>{{blocked}}</td>
+					{{/alumno}}
+					<td><input type="submit" value="Guardar"></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

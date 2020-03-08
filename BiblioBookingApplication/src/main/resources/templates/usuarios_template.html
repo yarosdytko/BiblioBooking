@@ -13,14 +13,27 @@
 		</header>
 		<nav>
 			<ul>
-			  <li><a href="/">Inicio</a></li>
-			  <li><a href="/informacion">Informacion</a></li>
-			  <li><a href="/reservas">Mis reservas</a></li>
-			  <li><a href="/perfil">Mi perfil</a></li>
-			  <li><a href="/login">Login</a></li>
-			  <li><a href="/register">Registrarse</a></li>
-			  <li><a href="/admin">Panel Administrador</a></li>
-			  <li><a href="/gestion">Gestion</a></li>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				{{/invitado}}
+				<li><a href="/register">Registrarse</a></li>
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
 			</ul>
 		</nav>
 		<section>
@@ -41,11 +54,11 @@
 					{{#administrador}}
 						<tr>
 							<td>{{name}}</td>
-							<td>{{apellido}}</td>
-							<td>{{userName}}</td>
+							<td>{{lastname}}</td>
+							<td>{{username}}</td>
 							<td>{{email}}</td>
-							<td><a href="/{{ruta}}/usuarios/editar_admin{{&idAdmin}}"><button>Editar</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/eliminar_admin{{&idAdmin}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/editar_admin/{{&id}}"><button type="submit">Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_admin/{{&id}}"><button type="submit">Eliminar</button></a></td>
 						</tr>
 					{{/administrador}}
 				</tbody>
@@ -57,7 +70,6 @@
 			<table>
 				<thead>
 					<tr>
-						<td>idEmpleado</td>
 						<td>Nombre</td>
 						<td>Apellido</td>
 						<td>Nombre de usuario</td>
@@ -67,13 +79,12 @@
 				<tbody>
 					{{#empleado}}
 						<tr>
-							<td>{{idEmpleado}}</td>
 							<td>{{name}}</td>
-							<td>{{apellido}}</td>
-							<td>{{userName}}</td>
+							<td>{{lastname}}</td>
+							<td>{{username}}</td>
 							<td>{{email}}</td>
-							<td><a href="/{{ruta}}/usuarios/editar_empleado{{&idEmpleado}}"><button>Editar</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/eliminar_empleado{{&idEmpleado}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/editar_empleado/{{&id}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_empleado/{{&id}}"><button>Eliminar</button></a></td>
 						</tr>
 					{{/empleado}}
 				</tbody>
@@ -87,10 +98,9 @@
 			<table>
 				<thead>
 					<tr>
-						<td>Expediente</td>
 						<td>Nombre</td>
 						<td>Apellido</td>
-						<td>Nombre de usuario</td>
+						<td>Nombre de user</td>
 						<td>Email</td>
 						<td>Bloqeado</td>
 					</tr>
@@ -98,16 +108,15 @@
 				<tbody>
 					{{#alumno}}
 						<tr>
-							<td>{{expediente}}</td>
 							<td>{{name}}</td>
-							<td>{{apellido}}</td>
-							<td>{{userName}}</td>
+							<td>{{lastname}}</td>
+							<td>{{username}}</td>
 							<td>{{email}}</td>
-							<td>{{bloqueado}}</td>
-							<td><a href="/{{ruta}}/usuarios/editar_alumno{{&expediente}}"><button>Editar</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/eliminar_alumno{{&expediente}}"><button>Eliminar</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/bloquear_alumno{{&expediente}}"><button>Bloquear</button></a></td>
-							<td><a href="/{{ruta}}/usuarios/desbloquear_alumno{{&expediente}}"><button>Desbloquear</button></a></td>
+							<td>{{blocked}}</td>
+							<td><a href="/{{ruta}}/usuarios/editar_alumno/{{&id}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/eliminar_alumno/{{&id}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/bloquear_alumno/{{&id}}"><button>Bloquear</button></a></td>
+							<td><a href="/{{ruta}}/usuarios/desbloquear_alumno/{{&id}}"><button>Desbloquear</button></a></td>
 						</tr>
 					{{/alumno}}
 				</tbody>

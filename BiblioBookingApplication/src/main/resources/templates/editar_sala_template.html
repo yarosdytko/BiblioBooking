@@ -16,7 +16,7 @@
 <body>
 	<h2>Editando sala {{numeroSala}}</h2>
 	<a href="/{{ruta}}/salas"><button>Atras</button></a>
-	<form action="/{{ruta}}/salas/guardar_sala{{&idSala}}/guardar" method="post">
+	<form action="/{{ruta}}/salas/guardar_sala{{&id}}/guardar" method="post">
 		<table>
 			<thead>
 			<tr>
@@ -30,10 +30,10 @@
 			{{#sala}}
 			<tr>
 				<td>{{numeroSala}}</td>
-				<td><input type="text" name="capacidad" value="{{capacidad}}"></td>
-				<td><input type="text" name="mesas" value="{{mesas}}"></td>
-				<td><input type="text" name="sillas" value="{{sillas}}"></td>
-				<td><button type="submit">Guardar</button></td>
+				<td><input type="text" name="capacidad" value="{{capacidad}}"/></td>
+				<td><input type="text" name="mesas" value="{{mesas}}"/></td>
+				<td><input type="text" name="sillas" value="{{sillas}}"/></td>
+				<td><input type="submit" value="Guardar"/></td>
 			</tr>
 			{{/sala}}
 			</tbody>

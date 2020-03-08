@@ -14,13 +14,13 @@
 	<title>BiblioBooking</title>
 </head>
 <body>
-	<h2>Editando reserva {{idReserva}}</h2>
+	<h2>Editando reserva</h2>
 	<a href="/reservas"><button>Atras</button></a>
-	<form action="/reservas/editar_reserva{{&idReserva}}/guardar" method="post">
+	<form action="/reservas/editar_reserva/guardar" method="post">
+		<input type="hidden" name="id" value="{{id}}">
 		<table>
 			<thead>
 			<tr>
-				<td>ID reserva</td>
 				<td>Numero sala</td>
 				<td>Fecha</td>
 				<td>Hora</td>
@@ -28,11 +28,10 @@
 			</thead>
 			<tbody>
 			<tr>
-				<td>{{idReserva}}</td>
 				<td>{{numeroSala}}</td>
-				<td><input type="date" name="fecha" value="{{fecha}}"></td>
-				<td><input type="time" name="hora" value="{{hora}}"></td>
-				<td><button type="submit">Guardar</button></td>
+				<td><input type="date" name="fecha" value="{{fecha}}"/></td>
+				<td><input type="time" name="hora" value="{{hora}}"/></td>
+				<td><input type="submit" value="Guardar"/></td>
 			</tr>
 			</tbody>
 		</table>

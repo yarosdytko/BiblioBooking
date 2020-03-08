@@ -14,9 +14,9 @@
 <title>BiblioBooking</title>
 </head>
 <body>
-	<h2>Editando reserva {{idReserva}}</h2>
+	<h2>Editando reserva {{id}}</h2>
 	<a href="/{{ruta}}/reservas"><button>Atras</button></a>
-	<form action="/{{ruta}}/reservas/editar_reserva{{&idReserva}}/guardar" method="post">
+	<form action="/{{ruta}}/reservas/editar_reserva{{&id}}/guardar" method="post">
 		<table>
 			<thead>
 				<tr>
@@ -30,7 +30,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>{{idReserva}}</td>
+					<td>{{id}}</td>
 					<td>{{numeroSala}}</td>
 					<td>{{nombreAlumno}}</td>
 					<td>{{apellidoAlumno}}</td>

@@ -14,13 +14,26 @@
 		<nav>
 			<ul>
 				<li><a href="/">Inicio</a></li>
-			  	<li><a href="/informacion">Informacion</a></li>
-			  	<li><a href="/reservas">Mis reservas</a></li>
-			  	<li><a href="/perfil">Mi perfil</a></li>
-			  	<li><a href="/login">Login</a></li>
-			  	<li><a href="/register">Registrarse</a></li>
-			  	<li><a href="/admin">Panel Administrador</a></li>
-			  	<li><a href="/gestion">Gestion</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				{{/invitado}}
+				<li><a href="/register">Registrarse</a></li>
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
 			</ul>
 		</nav>
 		<section>

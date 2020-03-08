@@ -14,39 +14,46 @@
 		<nav>
 			<ul>
 				<li><a href="/">Inicio</a></li>
-			  	<li><a href="/informacion">Informacion</a></li>
-			  	<li><a href="/reservas">Mis reservas</a></li>
-			  	<li><a href="/perfil">Mi perfil</a></li>
-			  	<li><a href="/login">Login</a></li>
-			  	<li><a href="/register">Registrarse</a></li>
-			  	<li><a href="/admin">Panel Administrador</a></li>
-			  	<li><a href="/gestion">Gestion</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				{{/invitado}}
+				<li><a href="/register">Registrarse</a></li>
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
 			</ul>
 		</nav>
 		<section>
 			<h3>Nueva reserva</h3>
 			<form action="/reservas/nueva_reserva/reservar" method="POST" class="registerForm">
 			<div class="cont">
-				<label for="numSala"><b>Numero de sala</b></label><br>
+				<label><b>Numero de sala</b></label><br>
 				<select name="numSala">
 					{{#sala}}
 					<option value="{{numeroSala}}">{{numeroSala}}</option>
 					{{/sala}}
 				</select>
 				<br>
-				<label for="fecha"><b>Fecha</b></label>
-				<input type="date" name="fecha" required></input><br>
-				
-				<label for="hora"><b>Hora</b></label>
-				<input type="time" min="09:00" max="19:00" name="hora" required></input><br>
-				
-				<label for="nombre"><b>Nombre</b></label>
-				<input type="text" name="nombre" required></input><br>
-				
-				<label for="apellido"><b>Apellido</b></label>
-				<input type="text" name="apellido" required></input>
+				<label><b>Fecha</b></label>
+				<input type="date" name="fecha" required><br>
+
+				<label><b>Hora</b></label>
+				<input type="time" min="09:00" max="19:00" name="hora" required><br>
 				<br>
-				<button type="submit">Confirmar</button>
+				<input type="submit" value="Confirmar">
 			</div>
 			</form>
 			<div class="registerForm">

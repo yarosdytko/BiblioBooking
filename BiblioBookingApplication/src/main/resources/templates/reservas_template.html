@@ -13,14 +13,27 @@
 		</header>
 		<nav>
 			<ul>
-			  <li><a href="/">Inicio</a></li>
-			  <li><a href="/informacion">Informacion</a></li>
-			  <li><a href="/reservas">Mis reservas</a></li>
-			  <li><a href="/perfil">Mi perfil</a></li>
-			  <li><a href="/login">Login</a></li>
-			  <li><a href="/register">Registrarse</a></li>
-			  <li><a href="/admin">Panel Administrador</a></li>
-			  <li><a href="/gestion">Gestion</a></li>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				{{/invitado}}
+				<li><a href="/register">Registrarse</a></li>
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
 			</ul>
 		</nav>
 		<section>
@@ -42,12 +55,12 @@
 					{{#reserva}}
 						<tr>
 							<td>{{sala.numeroSala}}</td>
-							<td>{{alumno.name}}</td>
-							<td>{{alumno.apellido}}</td>
+							<td>{{usuario.name}}</td>
+							<td>{{usuario.lastname}}</td>
 							<td>{{fecha}}</td>
 							<td>{{hora}}</td>
-							<td><a href="/{{ruta}}/reservas/editar_reserva{{&idReserva}}"><button>Editar</button></a></td>
-							<td><a href="/{{ruta}}/reservas/eliminar_reserva{{&idReserva}}"><button>Eliminar</button></a></td>
+							<td><a href="/{{ruta}}/reservas/editar_reserva{{&id}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/reservas/eliminar_reserva{{&id}}"><button>Eliminar</button></a></td>
 						</tr>
 					{{/reserva}}
 				</tbody>
