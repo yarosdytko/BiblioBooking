@@ -2,11 +2,7 @@ package es.code.urjc.BiblioBookingApplication;
 
 import java.util.List;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 public class Sala {
@@ -20,7 +16,7 @@ public class Sala {
 	private int numeroMesas;
 	private int numeroSillas;
 	
-	@OneToMany(mappedBy = "sala")
+	@OneToMany(mappedBy = "sala",cascade = CascadeType.ALL)
 	private List<Reserva> reservas;
 	
 	public Sala() {

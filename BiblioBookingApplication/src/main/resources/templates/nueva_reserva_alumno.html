@@ -23,8 +23,8 @@
 				{{/usuario}}
 				{{#invitado}}
 				<li><a href="/login">Login</a></li>
-				{{/invitado}}
 				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
 				{{#admin}}
 				<li><a href="/admin">Panel Administrador</a></li>
 				{{/admin}}
@@ -53,6 +53,7 @@
 				<label><b>Hora</b></label>
 				<input type="time" min="09:00" max="19:00" name="hora" required><br>
 				<br>
+				<input type="hidden" name="_csrf" value="{{token}}"/>
 				<input type="submit" value="Confirmar">
 			</div>
 			</form>

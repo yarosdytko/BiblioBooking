@@ -17,6 +17,7 @@
 	<h2>Editando reserva {{id}}</h2>
 	<a href="/{{ruta}}/reservas"><button>Atras</button></a>
 	<form action="/{{ruta}}/reservas/editar_reserva{{&id}}/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		<table>
 			<thead>
 				<tr>

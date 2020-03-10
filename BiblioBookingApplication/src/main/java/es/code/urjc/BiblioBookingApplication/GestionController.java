@@ -1,15 +1,12 @@
 package es.code.urjc.BiblioBookingApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.View;
 
 @Controller
 public class GestionController {
@@ -18,9 +15,9 @@ public class GestionController {
 	private UserRepository usuarios;
 
 	@RequestMapping("/gestion")
-	public ModelAndView gestion(Model model) {
+	public String gestion(Model model) {
 		model.addAttribute("ruta", "gestion");
-		return new ModelAndView("control_template");
+		return "control_template";
 	}
 
 	@RequestMapping("/gestion/usuarios")
@@ -31,7 +28,7 @@ public class GestionController {
 		model.addAttribute("totalAlumnos",totalAlumnos);
 		if(totalAlumnos>0) {
 			model.addAttribute("tablaAlumnos",true);
-			model.addAttribute("alumno",usuarios.findUserByRoles("ROLE_ALUMNO"));
+			model.addAttribute("al",usuarios.findUsersByRoles("ROLE_ALUMNO"));
 		}
 		
 		return "usuarios_template";

@@ -21,8 +21,6 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
     private String passwordHash;
-
-    @Basic(optional = true)
     private boolean blocked;
 
     @ElementCollection(fetch = FetchType.EAGER)

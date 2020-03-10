@@ -24,7 +24,7 @@ public class UserRepositoryAuthenticationProvider implements AuthenticationProvi
     public Authentication authenticate(Authentication auth) throws AuthenticationException{
         User user = userRepository.findByusername(auth.getName());
 
-        if(user ==null){
+        if(user==null){
             throw new BadCredentialsException("User not found");
         }
 

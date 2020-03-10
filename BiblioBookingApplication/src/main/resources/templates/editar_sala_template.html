@@ -17,6 +17,7 @@
 	<h2>Editando sala {{numeroSala}}</h2>
 	<a href="/{{ruta}}/salas"><button>Atras</button></a>
 	<form action="/{{ruta}}/salas/guardar_sala{{&id}}/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		<table>
 			<thead>
 			<tr>

@@ -13,20 +13,20 @@
 		<nav>
 			<ul>
 				<li><a href="/">Inicio</a></li>
-			  	<li><a href="/informacion">Informacion</a></li>
+				<li><a href="/informacion">Informacion</a></li>
 				{{#alumno}}
-			  	<li><a href="/reservas">Mis reservas</a></li>
-			  	{{/alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
 				{{#usuario}}
 				<li><a href="/perfil">Mi perfil</a></li>
-			  	{{/usuario}}
+				{{/usuario}}
 				{{#invitado}}
 				<li><a href="/login">Login</a></li>
-				{{/invitado}}
 				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
 				{{#admin}}
 				<li><a href="/admin">Panel Administrador</a></li>
-			  	{{/admin}}
+				{{/admin}}
 				{{#gestion}}
 				<li><a href="/gestion">Gestion</a></li>
 				{{/gestion}}

@@ -23,8 +23,8 @@
 				{{/usuario}}
 				{{#invitado}}
 				<li><a href="/login">Login</a></li>
-				{{/invitado}}
 				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
 				{{#admin}}
 				<li><a href="/admin">Panel Administrador</a></li>
 				{{/admin}}
@@ -59,7 +59,8 @@
 				<label for="apellido"><b>Apellido</b></label>
 				<input type="text" name="apellido" required></input>
 				<br>
-				<button type="submit">Confirmar</button>
+				<input type="hidden" name="_csrf" value="{{token}}"/>
+				<input type="submit" value="Confirmar"/>
 			</div>
 			</form>
 			<div class="registerForm">

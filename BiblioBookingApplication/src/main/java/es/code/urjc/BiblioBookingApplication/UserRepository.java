@@ -5,6 +5,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 public interface UserRepository extends CrudRepository<User, Long> {
 
@@ -17,7 +19,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
     boolean existsByUsername(String username);
 
     int countUsersByRoles(String role);
-    Iterable<User> findUserByRoles(String role);
+    List<User> findUsersByRoles(String role);
 
     @Modifying
     @Query("UPDATE User u SET u.name = ?1, u.lastname = ?2, u.username = ?3 , u.email = ?4 WHERE u.id = ?5")

@@ -23,8 +23,8 @@
 				{{/usuario}}
 				{{#invitado}}
 				<li><a href="/login">Login</a></li>
-				{{/invitado}}
 				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
 				{{#admin}}
 				<li><a href="/admin">Panel Administrador</a></li>
 				{{/admin}}
@@ -59,6 +59,7 @@
 				
 				<label><b>Contraseña</b></label>
 				<input type="password" placeholder="Contraseña" name="password" required><br>
+				<input type="hidden" name="_csrf" value="{{token}}"/>
 				<input type="submit" value="Registrar"/>
 			</div>
 			</form>

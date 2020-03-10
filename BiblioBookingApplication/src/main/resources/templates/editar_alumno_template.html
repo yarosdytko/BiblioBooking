@@ -16,6 +16,7 @@ input {
 	<h2>Editando user {{nombre}} {{apellido}}</h2>
 	<a href="/{{ruta}}/usuarios"><button>Atras</button></a><br><br>
 	<form action="/{{ruta}}/usuarios/editar_alumno{{&expediente}}/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		<table>
 			<thead>
 				<tr>

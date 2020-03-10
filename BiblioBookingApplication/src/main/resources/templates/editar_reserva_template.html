@@ -17,6 +17,7 @@
 	<h2>Editando reserva</h2>
 	<a href="/reservas"><button>Atras</button></a>
 	<form action="/reservas/editar_reserva/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
 		<input type="hidden" name="id" value="{{id}}">
 		<table>
 			<thead>

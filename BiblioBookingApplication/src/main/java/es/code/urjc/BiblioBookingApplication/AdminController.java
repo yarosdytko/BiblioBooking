@@ -31,19 +31,19 @@ public class AdminController {
 		model.addAttribute("totalAdministradores",totalAdministradores);
 		if(totalAdministradores>0) {
 			model.addAttribute("tablaAdministradores",true);
-			model.addAttribute("administrador",users.findUserByRoles("ROLE_ADMIN"));
+			model.addAttribute("administrador",users.findUsersByRoles("ROLE_ADMIN"));
 		}
 
 		model.addAttribute("totalEmpleados",totalEmpleados);
 		if(totalEmpleados>0) {
 			model.addAttribute("tablaEmpleados",true);
-			model.addAttribute("empleado",users.findUserByRoles("ROLE_EMPLEADO"));
+			model.addAttribute("empleado",users.findUsersByRoles("ROLE_EMPLEADO"));
 		}
 
 		model.addAttribute("totalAlumnos",totalAlumnos);
 		if(totalAlumnos>0) {
 			model.addAttribute("tablaAlumnos",true);
-			model.addAttribute("alumno",users.findUserByRoles("ROLE_ALUMNO"));
+			model.addAttribute("al",users.findUsersByRoles("ROLE_ALUMNO"));
 		}
 		
 		return "usuarios_template";

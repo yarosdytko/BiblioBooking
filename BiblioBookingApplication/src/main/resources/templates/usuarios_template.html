@@ -23,8 +23,8 @@
 				{{/usuario}}
 				{{#invitado}}
 				<li><a href="/login">Login</a></li>
-				{{/invitado}}
 				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
 				{{#admin}}
 				<li><a href="/admin">Panel Administrador</a></li>
 				{{/admin}}
@@ -100,13 +100,13 @@
 					<tr>
 						<td>Nombre</td>
 						<td>Apellido</td>
-						<td>Nombre de user</td>
+						<td>Nombre de usuario</td>
 						<td>Email</td>
 						<td>Bloqeado</td>
 					</tr>
 				</thead>
 				<tbody>
-					{{#alumno}}
+					{{#al}}
 						<tr>
 							<td>{{name}}</td>
 							<td>{{lastname}}</td>
@@ -118,7 +118,7 @@
 							<td><a href="/{{ruta}}/usuarios/bloquear_alumno/{{&id}}"><button>Bloquear</button></a></td>
 							<td><a href="/{{ruta}}/usuarios/desbloquear_alumno/{{&id}}"><button>Desbloquear</button></a></td>
 						</tr>
-					{{/alumno}}
+					{{/al}}
 				</tbody>
 			</table>
 			{{/tablaAlumnos}}

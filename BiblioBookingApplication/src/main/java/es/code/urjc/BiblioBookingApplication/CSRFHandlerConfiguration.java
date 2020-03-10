@@ -1,5 +1,5 @@
 package es.code.urjc.BiblioBookingApplication;
-/*
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -26,8 +26,9 @@ class CSRFHandlerInterceptor extends HandlerInterceptorAdapter {
                            final HttpServletResponse response, final Object handler,
                            final ModelAndView modelAndView) throws Exception {
 
-        CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-        modelAndView.addObject("token", token.getToken());
+        if(modelAndView != null){
+            CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
+            modelAndView.addObject("token", token.getToken());
+        }
     }
 }
-*/
