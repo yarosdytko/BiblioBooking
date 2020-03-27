@@ -1,22 +1,12 @@
-package es.code.urjc.BiblioBookingApplication;
+package es.code.urjc.BiblioBookingService;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-
-@Entity
 public class Reserva {
 
-	@Id
-	@GeneratedValue (strategy = GenerationType.AUTO)
+
 	private long id;
-	
-	@ManyToOne
+
 	private Sala sala;
-	
-	@ManyToOne
+
 	private User usuario;
 	
 	private String fecha;
@@ -73,4 +63,5 @@ public class Reserva {
 	public void setHora(String hora) {
 		this.hora = hora;
 	}
+
 }

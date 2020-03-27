@@ -1,14 +1,17 @@
 package es.code.urjc.BiblioBookingApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
+import java.net.URI;
 
 @Controller
 public class ReservasController {
@@ -49,7 +52,18 @@ public class ReservasController {
 	@PostMapping("/reservas/nueva_reserva/reservar")
 	public String reservar_alumno(@RequestParam String fecha, @RequestParam String hora, @RequestParam int numSala,HttpServletRequest request) {
 
-		reservas.save(new Reserva(salas.findByNumeroSala(numSala),users.findByName(request.getUserPrincipal().getName()),fecha,hora));
+		Reserva reserva = new Reserva(salas.findByNumeroSala(numSala),users.findByName(request.getUserPrincipal().getName()),fecha,hora);
+
+		RestTemplate restTemplate = new RestTemplate();
+
+		String url = "http://localhost:8082/nueva_reserva";
+
+		HttpEntity<Reserva> reservaBody= new HttpEntity<>(reserva);
+
+		restTemplate.exchange(url,HttpMethod.POST,reservaBody,Void.class);
+
+		reservas.save(reserva);
+
 		return "redirect:/reservas";
 	}
 
