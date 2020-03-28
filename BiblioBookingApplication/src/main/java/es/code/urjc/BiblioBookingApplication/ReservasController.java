@@ -1,20 +1,20 @@
 package es.code.urjc.BiblioBookingApplication;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpServletRequest;
-import java.net.URI;
 
 @Controller
 public class ReservasController {
+
+	@Autowired
+	private ApiRestCommands apiRestCommands;
 
 	@Autowired
 	private ReservasRepository reservas;
@@ -24,7 +24,7 @@ public class ReservasController {
 
 	@Autowired
 	private SalasRepository salas;
-	
+
 	@RequestMapping("/reservas")
 	public String reservas(Model model, HttpServletRequest request) {
 
@@ -54,13 +54,8 @@ public class ReservasController {
 
 		Reserva reserva = new Reserva(salas.findByNumeroSala(numSala),users.findByName(request.getUserPrincipal().getName()),fecha,hora);
 
-		RestTemplate restTemplate = new RestTemplate();
-
-		String url = "http://localhost:8082/nueva_reserva";
-
-		HttpEntity<Reserva> reservaBody= new HttpEntity<>(reserva);
-
-		restTemplate.exchange(url,HttpMethod.POST,reservaBody,Void.class);
+		//envio de correo mediante apiRest
+		apiRestCommands.newReserva(reserva);
 
 		reservas.save(reserva);
 
@@ -69,6 +64,9 @@ public class ReservasController {
 
 	@RequestMapping("/reservas/eliminar_reserva{id}")
 	public String alumno_eliminar_reserva(@PathVariable int id) {
+
+		Reserva reserva = reservas.findById(id);
+		apiRestCommands.deleteReserva(reserva);
 		
 		reservas.deleteById((long) id);
 		return "redirect:/reservas";
@@ -88,8 +86,12 @@ public class ReservasController {
 
 	@PostMapping("/reservas/editar_reserva/guardar")
 	public String editar(@RequestParam int id,@RequestParam String fecha, @RequestParam String hora) {
-		
+
 		reservas.updateReserva(fecha,hora, id);
+
+		Reserva reserva = reservas.findById(id);
+
+		apiRestCommands.modifyReserva(reserva);
 		
 		return "redirect:/reservas";
 	}
@@ -118,7 +120,11 @@ public class ReservasController {
 	@PostMapping("/{ruta}/reservas/nueva_reserva/reservar")
 	public String reservar(Model model,@RequestParam String fecha, @RequestParam String hora, @RequestParam String nombre, @RequestParam String apellido, @RequestParam int numSala ) {
 
-		reservas.save(new Reserva(salas.findByNumeroSala(numSala),users.findByNameAndLastname(nombre,apellido),fecha,hora));
+		Reserva reserva = new Reserva(salas.findByNumeroSala(numSala),users.findByNameAndLastname(nombre,apellido),fecha,hora);
+
+		apiRestCommands.newReserva(reserva);
+
+		reservas.save(reserva);
 		return "redirect:/{ruta}/reservas";
 	}
 
@@ -142,11 +148,19 @@ public class ReservasController {
 
 		reservas.updateReserva(fecha,hora,(long) id);
 
+		Reserva reserva = reservas.findById(id);
+
+		apiRestCommands.modifyReserva(reserva);
+
 		return "redirect:/{ruta}/reservas";
 	}
 
 	@RequestMapping("/{ruta}/reservas/eliminar_reserva{id}")
 	public String eliminar_reserva(@PathVariable int id) {
+
+		Reserva reserva = reservas.findById(id);
+
+		apiRestCommands.deleteReserva(reserva);
 
 		reservas.deleteById((long) id);
 

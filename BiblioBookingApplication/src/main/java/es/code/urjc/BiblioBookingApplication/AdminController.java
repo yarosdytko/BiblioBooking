@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 public class AdminController {
 
 	@Autowired
+	private ApiRestCommands apiRestCommands;
+
+	@Autowired
 	private UserRepository users;
 
 	@RequestMapping("/admin")
@@ -61,14 +64,20 @@ public class AdminController {
 
 		if(!users.existsByNameAndLastname(name,lastname) && !users.existsByUsername(username)){
 			if(tipoUsuario.equals("Alumno")){
-				users.save(new User(name,lastname,username,email,password,"ROLE_USER","ROLE_ALUMNO"));
-				return "redirect:/admin/usuarios";
+				User user = new User(name,lastname,username,email,password,"ROLE_USER","ROLE_ALUMNO");
+				apiRestCommands.newUser(user);
+				users.save(user);
+				//return "redirect:/admin/usuarios";
 			}
 			if (tipoUsuario.equals("Empleado")){
-				users.save(new User(name,lastname,username,email,password,"ROLE_USER","ROLE_EMPLEADO"));
+				User user = new User(name,lastname,username,email,password,"ROLE_USER","ROLE_EMPLEADO");
+				apiRestCommands.newUser(user);
+				users.save(user);
 			}
 			if (tipoUsuario.equals("Administrador")){
-				users.save(new User(name,lastname,username,email,password,"ROLE_USER","ROLE_ADMIN"));
+				User user = new User(name,lastname,username,email,password,"ROLE_USER","ROLE_ADMIN");
+				apiRestCommands.newUser(user);
+				users.save(user);
 			}
 			return "redirect:/admin/usuarios";
 		} else {
@@ -109,8 +118,12 @@ public class AdminController {
 	//eliminar usuario
 	@RequestMapping("/admin/usuarios/eliminar_{user}/{id}")
 	public String eliminar_user(@PathVariable int id) {
-		
-		users.deleteById((long) id);
+
+		User user = users.findById(id);
+
+		apiRestCommands.deleteUser(user);
+
+		users.delete(user);
 		
 		return "redirect:/admin/usuarios";
 	}

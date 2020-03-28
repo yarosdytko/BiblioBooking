@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class RegisterController {
+
+	@Autowired
+	private ApiRestCommands apiRestCommands;
 	
 	@Autowired
 	private UserRepository users;
@@ -24,7 +27,12 @@ public class RegisterController {
 			model.addAttribute("ruta","/register");
 			return "usuario_existe";
 		} else {
-			users.save(new User(nombre,apellido,uname,email,passwd,"ROLE_USER","ROLE_ALUMNO"));
+
+			User user = new User(nombre,apellido,uname,email,passwd,"ROLE_USER","ROLE_ALUMNO");
+
+			apiRestCommands.newUser(user);
+
+			users.save(user);
 			return "usuario_registrado";
 		}
 	}

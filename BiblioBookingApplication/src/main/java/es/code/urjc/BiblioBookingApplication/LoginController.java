@@ -16,8 +16,6 @@ public class LoginController {
 	@RequestMapping("/login")
 	public String login() {
 
-		//CsrfToken token = (CsrfToken) request.getAttribute("_csrf");
-		//model.addAttribute("token", token.getToken());
 		return "login";
 	}
 

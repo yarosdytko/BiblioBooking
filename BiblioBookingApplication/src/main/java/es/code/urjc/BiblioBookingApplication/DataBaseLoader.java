@@ -38,7 +38,7 @@ public class DataBaseLoader {
         salas.save(new Sala(5,5,1,5));
 
         reservas.save(new Reserva(salas.findByNumeroSala(1), users.findByusername("cdiaz"),"2020-05-22","09:00"));
-        reservas.save(new Reserva(salas.findByNumeroSala(1), users.findByusername("cdiaz"),"2020-16-04","12:00"));
+        reservas.save(new Reserva(salas.findByNumeroSala(1), users.findByusername("cdiaz"),"2020-04-16","12:00"));
         reservas.save(new Reserva(salas.findByNumeroSala(1), users.findByusername("cdiaz"),"2020-05-01","17:00"));
     }
 
