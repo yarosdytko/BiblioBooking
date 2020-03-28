@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class GestionController {
 	
 	@Autowired
+	private ApiRestCommands apiRestCommands;
+	
+	@Autowired
 	private UserRepository usuarios;
 
 	@RequestMapping("/gestion")
@@ -43,7 +46,12 @@ public class GestionController {
 	@PostMapping("/gestion/usuarios/nuevo_usuario/registrar")
 	public String resgistrar(Model model, @RequestParam String nombre, @RequestParam String apellido, @RequestParam String uname, @RequestParam String email, @RequestParam String password) {
 		if(!usuarios.existsByNameAndLastname(nombre,apellido)) {
-			usuarios.save(new User(nombre,apellido,uname,email,password,"ROLE_USER","ROLE_ALUMNO"));
+			
+			User user = new User(nombre,apellido,uname,email,password,"ROLE_USER","ROLE_ALUMNO");
+			
+			apiRestCommands.newUser(user);
+			
+			usuarios.save(user);
 			return "redirect:/gestion/usuarios";
 		} else {
 			model.addAttribute("ruta","gestion");
@@ -80,8 +88,12 @@ public class GestionController {
 	//eliminar usuario
 	@RequestMapping("/gestion/usuarios/eliminar_{user}/{id}")
 	public String eliminar_user(@PathVariable int id) {
+		
+		User user = usuarios.findById(id);
+		
+		apiRestCommands.deleteUser(user);
 
-		usuarios.deleteById((long) id);
+		usuarios.delete(user);
 
 		return "redirect:/gestion/usuarios";
 	}
