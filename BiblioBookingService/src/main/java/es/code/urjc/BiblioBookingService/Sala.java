@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Sala {
 
+	@SuppressWarnings("unused")
 	private long id;
 	
 	private int numeroSala;
@@ -13,6 +14,7 @@ public class Sala {
 	private int numeroMesas;
 	private int numeroSillas;
 
+	@SuppressWarnings("unused")
 	private List<Reserva> reservas;
 	
 	public Sala() {

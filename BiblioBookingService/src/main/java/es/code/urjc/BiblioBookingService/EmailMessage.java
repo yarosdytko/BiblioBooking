@@ -1,7 +1,5 @@
 package es.code.urjc.BiblioBookingService;
 
-import java.util.List;
-
 public class EmailMessage {
 
     private Reserva r;
