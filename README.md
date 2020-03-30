@@ -131,8 +131,8 @@ con estos pasos ya se tendria la maquina virtual preparada para el despliegue de
 **Compilacion de los ejecutables**
 Tal y como viene indicado en las transparencias de la teoria los ejecutables se crearan mediante STS utlizando maven.
 Capturas de pantalla del proceso de compilacion.
-Aplicacion:
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTQ2ODc2MywtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
 -->
