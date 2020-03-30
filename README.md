@@ -146,9 +146,12 @@ este comando se lanza dos veces para copiar primero un ejecutable y luego el otr
 
 tambien al final de cada comando se puede añadir el simbolo & si se quiere lanzar las aplicaciones de fondo.
 Capturas de pantalla de los ejecutables corriendo en la maquina virtual:
-
+aplicacion
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/aplicacion_corriendo.png)
+servicio
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/servicio_corriendo.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE3OTU5OTAyLDU1MTc0ODAxNiwtNTc0NT
-Q2MzA0LC0xNjM4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbMTI4NjY1Nzk4Miw0MTc5NTk5MDIsNTUxNz
+Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
