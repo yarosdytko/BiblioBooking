@@ -124,7 +124,11 @@ hacer los cambios efectivos con:
 >FLUSH PRIVILEGES;
 
 crear la base de datos para la aplicacion:
-<
+>create database bibliobooking;
+>exit
+
+con estos pasos ya se tendria la maquina virtual preparada para el despliegue de la aplicacion y el servicio interno.
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE0OTI5ODA3XX0=
+eyJoaXN0b3J5IjpbLTE2MDU5NjU3NjBdfQ==
 -->
