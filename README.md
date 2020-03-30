@@ -83,17 +83,19 @@ Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina vi
 
 Creo el directorio para la maquina virtual.
 
-mkdir -p ~/vagrant/bibliobooking
-cd ~/vagrant/bibliobooking
+>mkdir -p ~/vagrant/bibliobooking
+>cd ~/vagrant/bibliobooking
 
 inicializar el fichero de configuracion para la maquina virtual.
-vagrant init ubuntu/bionic64
+>vagrant init ubuntu/bionic64
+
 al lanzar ese comando se creara en el directorio un arhivo llamado Vagrantfile
 el siguente paso es abrir ese archivo con cualquier editor de texto y descomentar la linea con el siguente contenido:
 > config.vm.network "private_network", ip: "192.168.33.10"
 
 al descomentar esa linea se habilitara en la maquina virtual una interfaz de red con la ip indicada(que se puede cambiar si es necesario), esta sera la direccion ip por la cual se accedera a la pagina web de la aplicacion.
-una vez guardado el archivo 
+una vez guardado el archivo arrancamos la maquina virtual con el comando 
+>vagrant up
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4MzgwNDk4N119
+eyJoaXN0b3J5IjpbLTExOTAzMzIyNDhdfQ==
 -->
