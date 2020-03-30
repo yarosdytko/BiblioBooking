@@ -191,8 +191,11 @@ salas
 neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 
+
+empleado
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MDExMjM2NSwtNzE4NjM1MDk0LDQxNz
-k1OTkwMiw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1
-MF19
+eyJoaXN0b3J5IjpbLTE2MzM5Njg0NjIsLTcxODYzNTA5NCw0MT
+c5NTk5MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYz
+NTBdfQ==
 -->
