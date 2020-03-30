@@ -142,6 +142,7 @@ Una vez obtenidos los ejecutables(se pueden encontrar el la carpeta target de ca
 
 este comando se lanza dos veces para copiar primero un ejecutable y luego el otro, una vez teniendo los ejecutables en la maquina virtual cada uno de ellos se lanza con el comando:
 >java -jar BiblioBookingApplication-0.0.1-SNAPSHOT.jar
+>
 >java -jar BiblioBookingService-0.0.1-SNAPSHOT.jar
 
 tambien al final de cada comando se puede añadir el simbolo & si se quiere lanzar las aplicaciones de fondo.
@@ -152,6 +153,6 @@ servicio
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/servicio_corriendo.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NjY1Nzk4Miw0MTc5NTk5MDIsNTUxNz
-Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbNjE0NTA5Nzk0LDQxNzk1OTkwMiw1NTE3ND
+gwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
 -->
