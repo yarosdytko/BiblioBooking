@@ -76,7 +76,8 @@ Diagrama de clases y templates de la aplicacion
 Diagrama de clases del servicio interno
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingServiceDiagramaDeClases.png)
 
-**Desp**
+**Maquina virtual**
+Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina virtual de ubuntu-server 18.04, como software de virtualizacion usare virtualbox+vagra
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0NTEwMzI0MV19
+eyJoaXN0b3J5IjpbLTEzNjQ4ODUwMTVdfQ==
 -->
