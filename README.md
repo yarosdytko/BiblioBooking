@@ -100,7 +100,9 @@ una vez guardado el archivo arrancamos la maquina virtual con el comando
 una vez arrancada la maquina virtual puedo conectarme con ella mediante el comando
 >vagrant ssh
 
-lo 
+lo cual abre una sesion remota en la maquina virtual.
+**Configuracion de maquina virtual**
+Para desplegar correctamente la aplicacion, el servicio y bbdd en la maquina virtual hay que instalar el entorno 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MjgyMzY3M119
+eyJoaXN0b3J5IjpbMTY1MDE4ODE2OF19
 -->
