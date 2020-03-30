@@ -155,7 +155,10 @@ aplicacion
 servicio
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/servicio_corriendo.png)
 
+**Captras de pantall de la aplicacion**
+login
+![]()
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MTY4Njc0Niw0MTc5NTk5MDIsNTUxNz
+eyJoaXN0b3J5IjpbLTM0Mzc4ODU3Nyw0MTc5NTk5MDIsNTUxNz
 Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
