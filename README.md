@@ -103,13 +103,16 @@ una vez arrancada la maquina virtual puedo conectarme con ella mediante el coman
 lo cual abre una sesion remota en la maquina virtual.
 **Configuracion de maquina virtual**
 Para desplegar correctamente la aplicacion, el servicio y bbdd en la maquina virtual hay que instalar el entorno java8, y una base de datos mysql
-Instalacion de java8 se realiza mediante comandos
+Instalacion de java8 se realiza mediante comandos:
 > apt-get update && apt-get install openjdk-8-jre
 
 una vez temrinado el proceso de instalacion de jre, se instala la base de datos:
 > apt-get update && apt-get install mysql-server
 
-cuando haya terminado el p
+cuando haya terminado el proceso de instalacion hay que configurar la base de datos con los siguentes comandos:
+>sudo mysql_secure_installation
+
+esto realiza la configuracion inicial de la bbdd y en este pa
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0MDg1MTM2XX0=
+eyJoaXN0b3J5IjpbLTQ4MTczMjE5M119
 -->
