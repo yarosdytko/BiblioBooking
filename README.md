@@ -83,10 +83,10 @@ Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina vi
 
 Creo el directorio para la maquina virtual.
 
-mkdir -p vagrant/bibliobooking
-cd vagrant/bibliobooking
+mkdir -p ~/vagrant/bibliobooking
+cd ~/vagrant/bibliobooking
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MDkzOTUxMF19
+eyJoaXN0b3J5IjpbLTQzOTQwODc0NF19
 -->
