@@ -84,6 +84,7 @@ Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina vi
 Creo el directorio para la maquina virtual.
 
 >mkdir -p ~/vagrant/bibliobooking
+>
 >cd ~/vagrant/bibliobooking
 
 inicializar el fichero de configuracion para la maquina virtual.
@@ -118,6 +119,7 @@ una vez terminado el porceso entramos en la bbdd con el comando:
 
 hay que configurar la bbdd para que el usuario root pueda acceder mediante contraseña y no mediante socket de autentificacion:
 >ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+>
 >el campo password se cambia por la contraseña de root establecida en el paso anterior
 
 hacer los cambios efectivos con:
@@ -125,6 +127,7 @@ hacer los cambios efectivos con:
 
 crear la base de datos para la aplicacion:
 >create database bibliobooking;
+>
 >exit
 
 con estos pasos ya se tendria la maquina virtual preparada para el despliegue de la aplicacion y el servicio interno.
@@ -153,6 +156,6 @@ servicio
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/servicio_corriendo.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE0NTA5Nzk0LDQxNzk1OTkwMiw1NTE3ND
-gwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbMTY5MTY4Njc0Niw0MTc5NTk5MDIsNTUxNz
+Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
