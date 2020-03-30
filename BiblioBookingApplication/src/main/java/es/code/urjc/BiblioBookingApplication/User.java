@@ -27,6 +27,13 @@ public class User {
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> roles;
 
+    /*
+    * Definicion de roles de usuarios:
+    * ROLE_ADMIN - otorga permisos de administrador de la aplicacion
+    * ROLE_EMPLEADO - rol que usan los empleados de la biblioteca
+    * ROLE_ALUMNO - rol que usan los alumnos usuarios de la biblioteca
+    * */
+
     public User(){
 
     }

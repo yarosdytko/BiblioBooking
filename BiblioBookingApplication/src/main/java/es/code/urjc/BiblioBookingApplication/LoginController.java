@@ -34,10 +34,10 @@ public class LoginController {
 		}
 		return "redirect:/login";
 	}
-
+/*
 	@RequestMapping("/blocked")
 	public String blocked() throws Exception {
 		return "blocked";
 	}
-	
+ */
 }
