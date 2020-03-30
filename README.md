@@ -162,8 +162,15 @@ bienvenida
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/pantalla_de_bienvenida.png)
 informacion
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/informacion.png)
-pe
+perfil
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_perfil.png)
+alumno reservas
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_reservas.png)
+alumno nueva reserva
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_nueva_reserva.png)
+alumno editar reserva
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_editar_reserva.png
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3ODIzNzkwMSw0MTc5NTk5MDIsNTUxNz
+eyJoaXN0b3J5IjpbLTg0NDAwNjc4MSw0MTc5NTk5MDIsNTUxNz
 Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
