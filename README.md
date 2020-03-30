@@ -86,7 +86,9 @@ Creo el directorio para la maquina virtual.
 mkdir -p ~/vagrant/bibliobooking
 cd ~/vagrant/bibliobooking
 
-
+inicializar el fichero de configuracion para la maquina virtual.
+vagrant init ubuntu/bionic64
+desp
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQzOTQwODc0NF19
+eyJoaXN0b3J5IjpbLTM2ODYwNjc3OV19
 -->
