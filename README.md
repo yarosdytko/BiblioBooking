@@ -97,6 +97,10 @@ al descomentar esa linea se habilitara en la maquina virtual una interfaz de red
 una vez guardado el archivo arrancamos la maquina virtual con el comando 
 >vagrant up
 
+una vez arrancada la maquina virtual puedo conectarme con ella mediante el comando
+>vagrant ssh
+
+lo 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg1NTk2MTE4XX0=
+eyJoaXN0b3J5IjpbMTY3MjgyMzY3M119
 -->
