@@ -145,9 +145,10 @@ este comando se lanza dos veces para copiar primero un ejecutable y luego el otr
 >java -jar BiblioBookingService-0.0.1-SNAPSHOT.jar
 
 tambien al final de cada comando se puede añadir el simbolo & si se quiere lanzar las aplicaciones de fondo.
-Capturas de panta
+Capturas de pantalla de los ejecutables corriendo en la maquina virtual:
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MTAxNjQ0MSw1NTE3NDgwMTYsLTU3ND
-U0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbNDE3OTU5OTAyLDU1MTc0ODAxNiwtNTc0NT
+Q2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
