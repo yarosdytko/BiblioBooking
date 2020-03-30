@@ -1,6 +1,13 @@
 # BiblioBooking
 **Nombre de la aplicacion Web:** BiblioBooking
 
+# Indice
+1. [Fase 1](#fase1)
+2. [Fase 2](#fase2)
+3. [Fase 3](#fase3)
+
+
+## Fase1
 **Descripcion:** La tematica elegida para este proyecto web es la de implementar un portal de reservas de salas en una biblioteca(como por ej la del campus), de esta manera los alumnos tendrian una herramienta que les permitiria realizar y gestionar sus reservas de sala en una biblioteca de manera rapida y comoda.
 
 **Funcionalidades:** La funcionalidad **publica** trata de ofrecerle al usuario informacion general sobre la biblioteca(distribucion, horarios, direccion, etc), de esta manera cualquier persona que acceda a la web puede tener toda la informacion de interes sobre el lugar, por otra parte la funcionalidad **privada** requerira que el usuario se de de alta en el sistema, de esta manera un usuario registrado podra tener acceso a las funcionalidades de hacer reservas de sala, consultar disponibilidade de salas, gestionar(modificar,  cancelar) sus reservas actuales.
@@ -27,7 +34,7 @@ Correo: y.dytko.2017@alumnos.urjc.es
 
 Github: yarosdytko ([https://github.com/yarosdytko](https://github.com/yarosdytko))
 
-**Fase2**
+## Fase2
 Diagrama de navegacion
 ![Diagrama de navegacion](https://github.com/yarosdytko/BiblioBooking/blob/master/diagrama_de_navegacion.png)
 La aplicacion esta estructurada alrededor de un menu de navegacion principal desde el cual se accede a todos los recursos y funcionalidades
@@ -59,3 +66,73 @@ A continuacion vienen detalladas algunas capturas de las vistas principales de l
 
 **Diagrama entidad relacion de BBDD**
 ![diagrama_bbdd](https://github.com/yarosdytko/BiblioBooking/blob/master/bbdd_esquema.png)
+
+## Fase3
+**Diagramas UML de clases y templates**
+
+Diagrama de clases y templates de la aplicacion
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingApplicationDiagramaDeClases.png)
+
+Diagrama de clases del servicio interno
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingServiceDiagramaDeClases.png)
+
+**Maquina virtual**
+Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina virtual de ubuntu-server 18.04, como software de virtualizacion usare virtualbox+vagran, los pasos de instalacion de virtualbox y vagrant los obviare ya que no entran dentro del ambito del proyecto.
+
+**Creacion de maquina virtual:**
+
+Creo el directorio para la maquina virtual.
+
+>mkdir -p ~/vagrant/bibliobooking
+>cd ~/vagrant/bibliobooking
+
+inicializar el fichero de configuracion para la maquina virtual.
+>vagrant init ubuntu/bionic64
+
+al lanzar ese comando se creara en el directorio un arhivo llamado Vagrantfile
+el siguente paso es abrir ese archivo con cualquier editor de texto y descomentar la linea con el siguente contenido:
+> config.vm.network "private_network", ip: "192.168.33.10"
+
+al descomentar esa linea se habilitara en la maquina virtual una interfaz de red con la ip indicada(que se puede cambiar si es necesario), esta sera la direccion ip por la cual se accedera a la pagina web de la aplicacion.
+una vez guardado el archivo arrancamos la maquina virtual con el comando 
+>vagrant up
+
+una vez arrancada la maquina virtual puedo conectarme con ella mediante el comando
+>vagrant ssh
+
+lo cual abre una sesion remota en la maquina virtual.
+**Configuracion de maquina virtual**
+Para desplegar correctamente la aplicacion, el servicio y bbdd en la maquina virtual hay que instalar el entorno java8, y una base de datos mysql
+Instalacion de java8 se realiza mediante comandos:
+> apt-get update && apt-get install openjdk-8-jre
+
+una vez temrinado el proceso de instalacion de jre, se instala la base de datos:
+> apt-get update && apt-get install mysql-server
+
+cuando haya terminado el proceso de instalacion hay que configurar la base de datos con los siguentes comandos:
+>sudo mysql_secure_installation
+
+esto realiza la configuracion inicial de la bbdd y en este paso se establece la contraseña de usuario root que se usara mas adelante.
+una vez terminado el porceso entramos en la bbdd con el comando:
+>sudo mysql -u root
+
+hay que configurar la bbdd para que el usuario root pueda acceder mediante contraseña y no mediante socket de autentificacion:
+>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+>el campo password se cambia por la contraseña de root establecida en el paso anterior
+
+hacer los cambios efectivos con:
+>FLUSH PRIVILEGES;
+
+crear la base de datos para la aplicacion:
+>create database bibliobooking;
+>exit
+
+con estos pasos ya se tendria la maquina virtual preparada para el despliegue de la aplicacion y el servicio interno.
+**Compilacion de los ejecutables**
+Tal y como viene indicado en las transparencias de la teoria los ejecutables se crearan mediante STS utlizando maven.
+Capturas de pantalla del proceso de compilacion.
+
+
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
+-->
