@@ -1,6 +1,13 @@
 # BiblioBooking
 **Nombre de la aplicacion Web:** BiblioBooking
 
+# Indice
+1. [Fase 1](#fase1)
+2. [Fase 2](#fase2)
+3. [Fase 3](#fase3)
+
+
+## Fase1
 **Descripcion:** La tematica elegida para este proyecto web es la de implementar un portal de reservas de salas en una biblioteca(como por ej la del campus), de esta manera los alumnos tendrian una herramienta que les permitiria realizar y gestionar sus reservas de sala en una biblioteca de manera rapida y comoda.
 
 **Funcionalidades:** La funcionalidad **publica** trata de ofrecerle al usuario informacion general sobre la biblioteca(distribucion, horarios, direccion, etc), de esta manera cualquier persona que acceda a la web puede tener toda la informacion de interes sobre el lugar, por otra parte la funcionalidad **privada** requerira que el usuario se de de alta en el sistema, de esta manera un usuario registrado podra tener acceso a las funcionalidades de hacer reservas de sala, consultar disponibilidade de salas, gestionar(modificar,  cancelar) sus reservas actuales.
@@ -27,7 +34,7 @@ Correo: y.dytko.2017@alumnos.urjc.es
 
 Github: yarosdytko ([https://github.com/yarosdytko](https://github.com/yarosdytko))
 
-**Fase2**
+## Fase2
 Diagrama de navegacion
 ![Diagrama de navegacion](https://github.com/yarosdytko/BiblioBooking/blob/master/diagrama_de_navegacion.png)
 La aplicacion esta estructurada alrededor de un menu de navegacion principal desde el cual se accede a todos los recursos y funcionalidades
@@ -59,3 +66,13 @@ A continuacion vienen detalladas algunas capturas de las vistas principales de l
 
 **Diagrama entidad relacion de BBDD**
 ![diagrama_bbdd](https://github.com/yarosdytko/BiblioBooking/blob/master/bbdd_esquema.png)
+
+## Fase3
+Diagramas UML de clases y templates
+
+Diagrama de clases y templates de la aplicacion
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingApplicationDiagramaDeClases.png)
+
+Diagrama de clases del servicio interno
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingServiceDiagramaDeClases.png)
+
