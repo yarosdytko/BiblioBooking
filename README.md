@@ -169,8 +169,15 @@ alumno reservas
 alumno nueva reserva
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_nueva_reserva.png)
 alumno editar reserva
-![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_editar_reserva.png
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_editar_reserva.png)
+alumno registro
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_resgistro.png)
+alumno registrado
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_registrado.png)
+
+admin
+panel_admin
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NDAwNjc4MSw0MTc5NTk5MDIsNTUxNz
-Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbLTExOTc4NTgyNjYsNDE3OTU5OTAyLDU1MT
+c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
