@@ -79,7 +79,14 @@ Diagrama de clases del servicio interno
 **Maquina virtual**
 Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina virtual de ubuntu-server 18.04, como software de virtualizacion usare virtualbox+vagran, los pasos de instalacion de virtualbox y vagrant los obviare ya que no entran dentro del ambito del proyecto.
 
-C
+**Creacion de maquina virtual:**
+
+Creo el di
+
+mkdir -p vagrant/bibliobooking
+cd vagrant/bibliobooking
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MDExNjc4Nl19
+eyJoaXN0b3J5IjpbMTYyNDE1ODcwN119
 -->
