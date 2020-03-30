@@ -174,8 +174,6 @@ alumno registro
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_resgistro.png)
 alumno registrado
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/alumno/alumno_registrado.png)
-
-admin
 panel_admin
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/panel_admin.png)
 reservas
@@ -191,11 +189,8 @@ salas
 neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 
-
-empleado
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzM5Njg0NjIsLTcxODYzNTA5NCw0MT
-c5NTk5MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYz
-NTBdfQ==
+eyJoaXN0b3J5IjpbMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNz
+k1OTkwMiw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1
+MF19
 -->
