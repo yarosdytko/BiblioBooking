@@ -90,7 +90,9 @@ inicializar el fichero de configuracion para la maquina virtual.
 vagrant init ubuntu/bionic64
 al lanzar ese comando se creara en el directorio un arhivo llamado Vagrantfile
 el siguente paso es abrir ese archivo con cualquier editor de texto y descomentar la linea con el siguente contenido:
->
+> config.vm.network "private_network", ip: "192.168.33.10"
+
+al descomentar esa linea se habilitara en la maquina virtual 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNzI1NDUyOV19
+eyJoaXN0b3J5IjpbLTE4MTc1NDA0NTldfQ==
 -->
