@@ -188,8 +188,9 @@ usuarios
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_usuarios.png)
 salas
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_salas.png)
-
+neva_sada
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxODYzNTA5NCw0MTc5NTk5MDIsNTUxNz
-Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbLTE5Njk2NTAxNDIsLTcxODYzNTA5NCw0MT
+c5NTk5MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYz
+NTBdfQ==
 -->
