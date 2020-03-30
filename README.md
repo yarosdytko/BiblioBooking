@@ -116,7 +116,9 @@ esto realiza la configuracion inicial de la bbdd y en este paso se establece la 
 una vez terminado el porceso entramos en la bbdd con el comando:
 >sudo mysql -u root
 
-hay que configurar la bbdd para que el usuario root pueda acceder mediante 
+hay que configurar la bbdd para que el usuario root pueda acceder mediante contraseña y no mediante socket de autentificacion:
+>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+>el campo password se cambia por la contrase
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTY1NTM0NV19
+eyJoaXN0b3J5IjpbLTExNzEwOTgzNDFdfQ==
 -->
