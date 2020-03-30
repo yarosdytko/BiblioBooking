@@ -141,9 +141,13 @@ Una vez obtenidos los ejecutables(se pueden encontrar el la carpeta target de ca
 >vagrant scp ruta_hacia_ejecutable_en_maquina_anfitrion :.
 
 este comando se lanza dos veces para copiar primero un ejecutable y luego el otro, una vez teniendo los ejecutables en la maquina virtual cada uno de ellos se lanza con el comando:
-> java -jar 
+>java -jar BiblioBookingApplication-0.0.1-SNAPSHOT.jar
+>java -jar BiblioBookingService-0.0.1-SNAPSHOT.jar
+
+tambien al final de cada comando se puede añadir el simbolo & si se quiere lanzar las aplicaciones de fondo.
+Capturas de panta
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mz
-g0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbMTc0MTAxNjQ0MSw1NTE3NDgwMTYsLTU3ND
+U0NjMwNCwtMTYzODQ2NjM1MF19
 -->
