@@ -68,7 +68,7 @@ A continuacion vienen detalladas algunas capturas de las vistas principales de l
 ![diagrama_bbdd](https://github.com/yarosdytko/BiblioBooking/blob/master/bbdd_esquema.png)
 
 ## Fase3
-Diagramas UML de clases y templates
+**Diagramas UML de clases y templates**
 
 Diagrama de clases y templates de la aplicacion
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingApplicationDiagramaDeClases.png)
@@ -76,3 +76,7 @@ Diagrama de clases y templates de la aplicacion
 Diagrama de clases del servicio interno
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingServiceDiagramaDeClases.png)
 
+**Desp**
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTU0NTEwMzI0MV19
+-->
