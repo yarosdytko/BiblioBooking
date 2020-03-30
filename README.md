@@ -157,8 +157,13 @@ servicio
 
 **Captras de pantall de la aplicacion**
 login
-![]()
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/login.png)
+bienvenida
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/pantalla_de_bienvenida.png)
+informacion
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/informacion.png)
+pe
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0Mzc4ODU3Nyw0MTc5NTk5MDIsNTUxNz
+eyJoaXN0b3J5IjpbLTg3ODIzNzkwMSw0MTc5NTk5MDIsNTUxNz
 Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
