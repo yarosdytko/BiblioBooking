@@ -131,13 +131,15 @@ con estos pasos ya se tendria la maquina virtual preparada para el despliegue de
 **Compilacion de los ejecutables**
 Tal y como viene indicado en las transparencias de la teoria los ejecutables se crearan mediante STS utlizando maven.
 Capturas de pantalla del proceso de compilacion.
-Configuracion de maven(es igual para aplicac como para servicio interno)
+Configuracion de maven(es igual para aplicacion como para servicio interno)
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/compilacion/maven_configuration.png)
 salida de la compilacion de aplicacion
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/compilacion/build_aplicacion.png)
-
+salida de compilacion del servicio interno
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/compilacion/build_servicio.png)
+Una vez obtenidos los ejecutables(se pueden encontrar el la carpeta target de cada proyecto) hay que copia
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTM0MDQ5NiwtNTc0NTQ2MzA0LC0xNj
-M4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbNjY4NjM3NzAzLC01NzQ1NDYzMDQsLTE2Mz
+g0NjYzNTBdfQ==
 -->
