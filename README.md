@@ -177,7 +177,15 @@ alumno registrado
 
 admin
 panel_admin
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/panel_admin.png)
+reservas
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_reservas.png)
+nueva reserva
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_reserva.png)
+editando reserva
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_editando_reserva.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTc4NTgyNjYsNDE3OTU5OTAyLDU1MT
-c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbMTM1OTY1OTkyNCw0MTc5NTk5MDIsNTUxNz
+Q4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
