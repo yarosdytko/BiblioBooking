@@ -128,7 +128,10 @@ crear la base de datos para la aplicacion:
 >exit
 
 con estos pasos ya se tendria la maquina virtual preparada para el despliegue de la aplicacion y el servicio interno.
+**Compilacion de los ejecutables**
+Tal y como viene indicado en las transparencias de la teoria los ejecutables se crearan mediante STS utlizando maven.
+Capturas de pantalla del proceso de compilacion.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU5NjU3NjBdfQ==
+eyJoaXN0b3J5IjpbLTE2Mzg0NjYzNTBdfQ==
 -->
