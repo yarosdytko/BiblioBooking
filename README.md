@@ -77,7 +77,9 @@ Diagrama de clases del servicio interno
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/BiblioBookingServiceDiagramaDeClases.png)
 
 **Maquina virtual**
-Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina virtual de ubuntu-server 18.04, como software de virtualizacion usare virtualbox+vagra
+Para desplegar la aplicacion, el servicio iterno y la bbdd, usare una maquina virtual de ubuntu-server 18.04, como software de virtualizacion usare virtualbox+vagran, los pasos de instalacion de virtualbox y vagrant los obviare ya que no entran dentro del ambito del proyecto.
+
+C
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjQ4ODUwMTVdfQ==
+eyJoaXN0b3J5IjpbMTE5MDExNjc4Nl19
 -->
