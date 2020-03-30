@@ -118,7 +118,8 @@ una vez terminado el porceso entramos en la bbdd con el comando:
 
 hay que configurar la bbdd para que el usuario root pueda acceder mediante contraseña y no mediante socket de autentificacion:
 >ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
->el campo password se cambia por la contrase
+>el campo password se cambia por la contraseña de root establecida en el paso anterior
+>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzEwOTgzNDFdfQ==
+eyJoaXN0b3J5IjpbLTIxNDQ0NjIzMjZdfQ==
 -->
