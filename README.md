@@ -112,7 +112,11 @@ una vez temrinado el proceso de instalacion de jre, se instala la base de datos:
 cuando haya terminado el proceso de instalacion hay que configurar la base de datos con los siguentes comandos:
 >sudo mysql_secure_installation
 
-esto realiza la configuracion inicial de la bbdd y en este pa
+esto realiza la configuracion inicial de la bbdd y en este paso se establece la contraseña de usuario root que se usara mas adelante.
+una vez terminado el porceso entramos en la bbdd con el comando:
+>sudo mysql -u root
+
+hay que configurar la bbdd para que el usuario root pueda acceder mediante 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4MTczMjE5M119
+eyJoaXN0b3J5IjpbMTA0MTY1NTM0NV19
 -->
