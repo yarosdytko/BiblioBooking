@@ -96,6 +96,7 @@ el siguente paso es abrir ese archivo con cualquier editor de texto y descomenta
 al descomentar esa linea se habilitara en la maquina virtual una interfaz de red con la ip indicada(que se puede cambiar si es necesario), esta sera la direccion ip por la cual se accedera a la pagina web de la aplicacion.
 una vez guardado el archivo arrancamos la maquina virtual con el comando 
 >vagrant up
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTAzMzIyNDhdfQ==
+eyJoaXN0b3J5IjpbNTg1NTk2MTE4XX0=
 -->
