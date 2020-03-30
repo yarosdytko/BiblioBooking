@@ -90,7 +90,7 @@ inicializar el fichero de configuracion para la maquina virtual.
 vagrant init ubuntu/bionic64
 al lanzar ese comando se creara en el directorio un arhivo llamado Vagrantfile
 el siguente paso es abrir ese archivo con cualquier editor de texto y descomentar la linea con el siguente contenido:
-
+>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NzI3MzkxMV19
+eyJoaXN0b3J5IjpbLTgyNzI1NDUyOV19
 -->
