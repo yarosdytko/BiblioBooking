@@ -137,9 +137,10 @@ salida de la compilacion de aplicacion
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/compilacion/build_aplicacion.png)
 salida de compilacion del servicio interno
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/compilacion/build_servicio.png)
-Una vez obtenidos los ejecutables(se pueden encontrar el la carpeta target de cada proyecto) hay que copia
+Una vez obtenidos los ejecutables(se pueden encontrar el la carpeta target de cada proyecto) hay que copiarlos a la maquina virtual, en este caso usare vagrant scp para copiar los archivos a la maquina virtual, el comando seria el siguente:
+>vagrant scp ruta_hacia_e
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY4NjM3NzAzLC01NzQ1NDYzMDQsLTE2Mz
-g0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbMjA0NDM5NTMwMiwtNTc0NTQ2MzA0LC0xNj
+M4NDY2MzUwXX0=
 -->
