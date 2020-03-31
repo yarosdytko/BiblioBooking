@@ -102,6 +102,7 @@ una vez arrancada la maquina virtual puedo conectarme con ella mediante el coman
 >vagrant ssh
 
 lo cual abre una sesion remota en la maquina virtual.
+
 **Configuracion de maquina virtual**
 Para desplegar correctamente la aplicacion, el servicio y bbdd en la maquina virtual hay que instalar el entorno java8, y una base de datos mysql
 Instalacion de java8 se realiza mediante comandos:
