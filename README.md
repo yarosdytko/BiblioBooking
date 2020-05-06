@@ -259,10 +259,12 @@ salas: https://localhost:443/cacheSalas
 
 usuarios: https://localhost:443/cacheUsers
 
+Inicialmente la aplicacion crea tres usuarios por defecto: admin, empleado y alumno, los tres usuarios tienen como password 
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ0NjI5NTUsLTgwMDAyMzc0OCw2Nz
-QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
-NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
-UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbMTc1Njc4ODEyLC04MDAwMjM3NDgsNjc0Mj
+c0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3ODAsMTk1OTk4ODYy
+NiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MT
+c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
