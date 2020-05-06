@@ -211,9 +211,11 @@ neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase_4/Fase4_Diagrama_BibliobbokingServiceApplication_Class_Diagramm.png)
 
 **Descripcion del servicio interno**
-ApiRest del servicio interno consiste en que el servicio interno recibe mediante 
+ApiRest del servicio interno consiste en que el servicio interno recibe mediante llamadas a la apiRest
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI1NTg2ODU4LC0xMjAwMzg2NzgwLDE5NT
-k5ODg2MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNzk1OTkw
-Miw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbLTE4OTc2MDgwNzMsLTEyMDAzODY3ODAsMT
+k1OTk4ODYyNiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5
+OTAyLDU1MTc0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX
+0=
 -->
