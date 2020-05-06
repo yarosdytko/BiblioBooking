@@ -222,17 +222,17 @@ La api tiene establecidas dos rutas:
 Mediante peticiones http POST,PUT y DELETE se relizar diferentes funcionalidades definidas, toda la informacion viaja en el cuerpo de las peticiones y son objetos de las clases Rererva o User, una vez recibida la peticion la api extrae informacion del cuerpo de mensaje, la procesa y se envian correos informativos a los usuarios a los cuales va destinada esa informacion.
 Ejemplos:
 
-nueva reserva -> http//mailserver:8082/api/reservas/ metodo http PUT
+nueva reserva -> http://mailserver:8082/api/reservas/ metodo http PUT
 
-modificacion de la reserva -> http//mailserver:8082/api/reservas/ metodo http POST
+modificacion de la reserva -> http://mailserver:8082/api/reservas/ metodo http POST
 
-eliminacion de la reserva -> http//mailserver:8082/api/reservas/ metodo http DELETE
+eliminacion de la reserva -> http://mailserver:8082/api/reservas/ metodo http DELETE
 
-nuevo usuario -> http//mailserver:8082/api/usuarios/ metodo http PUT
+nuevo usuario -> http://mailserver:8082/api/usuarios/ metodo http PUT
 
-modificacion de datos de usuario -> http//mailserver:8082/api/usuarios/ metodo http POST
+modificacion de datos de usuario -> http://mailserver:8082/api/usuarios/ metodo http POST
 
-borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
+borrado de usuario -> http://mailserver:8082/api/usuarios/ metodo http DELETE
 
 **Docker**
 
@@ -265,9 +265,9 @@ Tambien se ha implementado el mecanismo de la sesion distribuida, asi si se cae 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDg4NDI1NDQsMjEyMzAzMzY4NSwtOD
-AwMDIzNzQ4LDY3NDI3NDIzMiwxNjQyMTAzMjY0LC0xMjAwMzg2
-NzgwLDE5NTk5ODg2MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LD
-QxNzk1OTkwMiw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2
-NjM1MF19
+eyJoaXN0b3J5IjpbMTU5NjMyODIxOCwyMTIzMDMzNjg1LC04MD
+AwMjM3NDgsNjc0Mjc0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3
+ODAsMTk1OTk4ODYyNiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsND
+E3OTU5OTAyLDU1MTc0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2
+MzUwXX0=
 -->
