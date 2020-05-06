@@ -67,7 +67,7 @@ public class ReservasController {
 
 		Reserva reserva = reservas.findById(id);
 		apiRestCommands.deleteReserva(reserva);
-		
+
 		reservas.deleteById((long) id);
 		return "redirect:/reservas";
 	}

@@ -1,6 +1,7 @@
 package es.code.urjc.BiblioBookingApplication;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name="reservas")
@@ -69,5 +70,22 @@ public class Reserva {
 
 	public void setHora(String hora) {
 		this.hora = hora;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Reserva reserva = (Reserva) o;
+		return id == reserva.id &&
+				sala.equals(reserva.sala) &&
+				usuario.equals(reserva.usuario) &&
+				fecha.equals(reserva.fecha) &&
+				hora.equals(reserva.hora);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, sala, usuario, fecha, hora);
 	}
 }

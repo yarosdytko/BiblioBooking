@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/tabla.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
+			</ul>
+		</nav>
+		<section>
+		<a href="/{{ruta}}/salas/nueva_sala"><button>Nueva sala</button></a>
+		<a href="/{{ruta}}"><button>Atras</button></a>
+		<p>Total salas: {{totalSalas}}</p>
+			{{#tablaSalas}}
+			<table>
+				<thead>
+					<tr>
+						<td>Numero sala</td>
+						<td>Capacidad</td>
+						<td>Mesas</td>
+						<td>Sillas</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#sala}}
+						<tr>
+							<td>{{numeroSala}}</td>
+							<td>{{capacidadMaxima}}</td>
+							<td>{{numeroMesas}}</td>
+							<td>{{numeroSillas}}</td>
+							<td><a href="/{{ruta}}/salas/editar_sala{{&id}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/salas/eliminar_sala{{&id}}"><button>Eliminar</button></a></td>
+						</tr>
+					{{/sala}}
+				</tbody>
+			</table>
+			{{/tablaSalas}}
+		</section>
+	</main>
+</body>
+</html>

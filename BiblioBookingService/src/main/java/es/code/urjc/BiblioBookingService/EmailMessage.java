@@ -44,6 +44,16 @@ public class EmailMessage {
                 +"\nCorreo electronico: "+u.getEmail());
     }
 
+    public String modificacionUsuario(){
+        return ("Le informamos que su cuenta de usuario en la plataforma BiblioBooking"
+                +"\nHa sido modificada."
+                +"\nNuevos datos de la cuenta:"
+                +"\nNombre: "+u.getName()
+                +"\nApellido: "+u.getLastname()
+                +"\nNombre de usuario: "+u.getUsername()
+                +"\nCorreo electronico: "+u.getEmail());
+    }
+
     public String borradoUsuario(){
         return ("Le informamos que su cuenta de usuario en la plataforma BiblioBooking"
                 +"\nCon los siguentes datos:  "

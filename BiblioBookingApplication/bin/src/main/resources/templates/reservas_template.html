@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="../css/tabla.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
+			</ul>
+		</nav>
+		<section>
+		<a href="/{{ruta}}/reservas/nueva_reserva"><button>Nueva reserva</button></a>
+		<a href="/{{ruta}}"><button>Atras</button></a>
+		<p>Total reservas: {{totalReservas}}</p>
+			{{#tablaReservas}}
+			<table>
+				<thead>
+					<tr>
+						<td>Sala</td>
+						<td>Nombre</td>
+						<td>Apellido</td>
+						<td>Fecha</td>
+						<td>Hora</td>
+					</tr>
+				</thead>
+				<tbody>
+					{{#reserva}}
+						<tr>
+							<td>{{sala.numeroSala}}</td>
+							<td>{{usuario.name}}</td>
+							<td>{{usuario.lastname}}</td>
+							<td>{{fecha}}</td>
+							<td>{{hora}}</td>
+							<td><a href="/{{ruta}}/reservas/editar_reserva{{&id}}"><button>Editar</button></a></td>
+							<td><a href="/{{ruta}}/reservas/eliminar_reserva{{&id}}"><button>Eliminar</button></a></td>
+						</tr>
+					{{/reserva}}
+				</tbody>
+			</table>
+			{{/tablaReservas}}
+		</section>
+	</main>
+</body>
+</html>

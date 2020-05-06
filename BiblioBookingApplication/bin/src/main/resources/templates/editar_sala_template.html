@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/tabla.css">
+	<style type="text/css">
+		input {
+			width: 100%;
+			margin: 0px;
+			border: none;
+		}
+	</style>
+	<title>BiblioBooking</title>
+</head>
+<body>
+	<h2>Editando sala {{numeroSala}}</h2>
+	<a href="/{{ruta}}/salas"><button>Atras</button></a>
+	<form action="/{{ruta}}/salas/guardar_sala{{&id}}/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
+		<table>
+			<thead>
+			<tr>
+				<td>Numero sala</td>
+				<td>Capacidad</td>
+				<td>Mesas</td>
+				<td>Sillas</td>
+			</tr>
+			</thead>
+			<tbody>
+			{{#sala}}
+			<tr>
+				<td>{{numeroSala}}</td>
+				<td><input type="text" name="capacidad" value="{{capacidad}}"/></td>
+				<td><input type="text" name="mesas" value="{{mesas}}"/></td>
+				<td><input type="text" name="sillas" value="{{sillas}}"/></td>
+				<td><input type="submit" value="Guardar"/></td>
+			</tr>
+			{{/sala}}
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

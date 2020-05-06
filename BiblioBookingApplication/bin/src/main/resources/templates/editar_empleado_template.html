@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/tabla.css">
+<style type="text/css">
+input {
+	width: 100%;
+	margin: 0px;
+	border: none;
+}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>Editando Empleado {{nombre}} {{apellido}}</h2>
+	<a href="/{{ruta}}/usuarios"><button>Atras</button></a><br><br>
+	<form action="/{{ruta}}/usuarios/editar_{{user}}{{&idEmpleado}}/guardar" method="post">
+		<input type="hidden" name="_csrf" value="{{token}}"/>
+		<table>
+			<thead>
+				<tr>
+					<td>Id</td>
+					<td>Nombre</td>
+					<td>Apellido</td>
+					<td>Nombre de user</td>
+					<td>Email</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{idEmpleado}}</td>
+					<td><input type="text" name="nombre" value="{{nombre}}"></td>
+					<td><input type="text" name="apellido" value="{{apellido}}"></td>
+					<td><input type="text" name="userName" value="{{userName}}"></td>
+					<td><input type="text" name="email" value="{{email}}"></td>
+					<td><button type="submit">Guardar</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
+</body>
+</html>

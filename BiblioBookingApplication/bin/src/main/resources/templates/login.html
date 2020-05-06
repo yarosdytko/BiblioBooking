@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/login.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
+			</ul>
+		</nav>
+		<section>
+			<form action="/login" method="post" class="loginForm">
+				<div class="cont">
+					<label><b>Nombre de usuario</b></label>
+					<input type="text" name="username">
+					<label><b>Contraseña</b></label>
+					<input type="password" name="password">
+					<input type="hidden" name="_csrf" value="{{token}}"/>
+					<input type="submit" value="Login"/>
+				</div>
+			</form>
+		</section>
+	</main>
+</body>
+</html>

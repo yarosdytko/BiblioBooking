@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table(name="users")
@@ -119,5 +120,25 @@ public class User {
 
     public void setBlocked(boolean blocked) {
         this.blocked = blocked;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id &&
+                blocked == user.blocked &&
+                name.equals(user.name) &&
+                lastname.equals(user.lastname) &&
+                email.equals(user.email) &&
+                username.equals(user.username) &&
+                passwordHash.equals(user.passwordHash) &&
+                roles.equals(user.roles);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, lastname, email, username, passwordHash, blocked, roles);
     }
 }

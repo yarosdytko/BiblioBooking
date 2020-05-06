@@ -1,5 +1,7 @@
 package es.code.urjc.BiblioBookingApplication;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,12 +9,14 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class AdminController {
-
+	
 	@Autowired
 	private ApiRestCommands apiRestCommands;
 
 	@Autowired
 	private UserRepository users;
+	
+	@Autowired ReservasRepository reservas;
 
 	@RequestMapping("/admin")
 	public String admin(Model model) {
@@ -26,7 +30,8 @@ public class AdminController {
 	public String usuarios(Model model) {
 		model.addAttribute("ruta","admin");
 		model.addAttribute("isAdmin",true);
-		
+
+
 		int totalAdministradores = users.countUsersByRoles("ROLE_ADMIN");
 		int totalEmpleados = users.countUsersByRoles("ROLE_EMPLEADO");
 		int totalAlumnos = users.countUsersByRoles("ROLE_ALUMNO");;
@@ -111,6 +116,10 @@ public class AdminController {
 	public String guardar_user(@PathVariable int id, @RequestParam String name, @RequestParam String lastname, @RequestParam String username, @RequestParam String email, @PathVariable String user) {
 		
 		users.updateUser(name, lastname, username, email,(long) id);
+
+		User u = users.findById((long)id);
+
+		apiRestCommands.modifyUser(u);
 		
 		return "redirect:/admin/usuarios";
 	}
@@ -121,9 +130,17 @@ public class AdminController {
 
 		User user = users.findById(id);
 
-		apiRestCommands.deleteUser(user);
+		List<Reserva> r = reservas.findByUsuario(user);
+		
+		if(!r.isEmpty()) {
+			for(int i=0;i<r.size();i++) {
+				
+				reservas.deleteById(r.get(i).getId());
+			}
+		}
 
 		users.delete(user);
+		apiRestCommands.deleteUser(user);
 		
 		return "redirect:/admin/usuarios";
 	}

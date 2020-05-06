@@ -1,6 +1,7 @@
 package es.code.urjc.BiblioBookingApplication;
 
 import java.util.List;
+import java.util.Objects;
 
 import javax.persistence.*;
 
@@ -61,5 +62,23 @@ public class Sala {
 
 	public void setNumeroSala(int numeroSala) {
 		this.numeroSala = numeroSala;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Sala sala = (Sala) o;
+		return id == sala.id &&
+				numeroSala == sala.numeroSala &&
+				capacidadMaxima == sala.capacidadMaxima &&
+				numeroMesas == sala.numeroMesas &&
+				numeroSillas == sala.numeroSillas &&
+				reservas.equals(sala.reservas);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, numeroSala, capacidadMaxima, numeroMesas, numeroSillas, reservas);
 	}
 }

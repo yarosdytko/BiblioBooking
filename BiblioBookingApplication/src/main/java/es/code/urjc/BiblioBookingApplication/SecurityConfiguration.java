@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
-//@EnableGlobalMethodSecurity(securedEnabled = true)
+//@EnableGlobalMethodSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
@@ -31,12 +31,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/informacion").permitAll();
         http.authorizeRequests().antMatchers("/login").permitAll();
         http.authorizeRequests().antMatchers("/register").permitAll();
+        http.authorizeRequests().antMatchers("/apiConfig").permitAll();
         
         //paginas privadas
         http.authorizeRequests().antMatchers("/perfil").hasAnyRole("ADMIN","EMPLEADO","ALUMNO");
         http.authorizeRequests().antMatchers("/admin/**").hasAnyRole("ADMIN");
         http.authorizeRequests().antMatchers("/gestion/**").hasAnyRole("EMPLEADO");
-        //http.authorizeRequests().antMatchers("/perfil").hasAnyRole("USER");
         
         //login
         http.formLogin().loginPage("/login");
@@ -47,7 +47,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         // Logout
         http.logout().logoutUrl("/logout");
-        http.logout().logoutSuccessUrl("/");
+        http.logout().logoutSuccessUrl("/logout");
 
         //http.csrf().disable();
     }

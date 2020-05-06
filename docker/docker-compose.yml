@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+
+    db:
+        image: mysql
+        command: --default-authentication-plugin=mysql_native_password
+        volumes:
+            - "./database:/var/lib/mysql"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+            MYSQL_DATABASE: bibliobooking
+        networks:
+            - red_interna
+            
+    webserver:
+        build: web_server/.
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:mysql://db/bibliobooking?serverTimezone=UTC
+            - MAIL_HOST=mailserver
+        expose:
+            - 8443
+        restart: unless-stopped
+        networks: 
+            - red_interna
+
+    mailserver:
+        build: servicio_interno/.
+        expose:
+            - 8082
+        restart: unless-stopped
+        networks:
+            - red_interna
+
+    lb:
+        image: haproxy:alpine
+        volumes:
+            - "./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro"
+        ports:
+            - 443:443
+            - 9443:9443
+        restart: unless-stopped
+        networks:
+            - red_interna
+        links:
+            - webserver
+            - mailserver
+
+networks:
+    red_interna:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.18.0.0/16
+

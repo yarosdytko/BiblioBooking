@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../css/register.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
+			</ul>
+		</nav>
+		<section>
+			<h3>Registro de alumno</h3>
+			<a href="/gestion/usuarios"><button id="noID">Volver</button></a>
+			<form action="/gestion/usuarios/nuevo_usuario/registrar" method="POST" class="registerForm">
+			<div class="cont">
+				<label><b>Nombre</b></label>
+				<input type="text" placeholder="nombre" name="nombre" required></input><br>
+				
+				<label><b>Apellido</b></label>
+				<input type="text" placeholder="Apellido" name="apellido" required></input><br>
+				
+				<label><b>Nombre de user</b></label>
+				<input type="text" placeholder="Nombre de user" name="uname" required><br>
+				
+				<label><b>Email</b></label>
+				<input type="email" placeholder="Correo electronico" name="email" required></input><br>
+				
+				<label><b>Contraseña</b></label>
+				<input type="password" placeholder="Contraseña" name="password" required><br>
+				<input type="hidden" name="_csrf" value="{{token}}"/>
+				<input type="submit" value="Confirmar"/>
+			</div>
+			</form>
+		</section>
+	</main>
+</body>
+</html>

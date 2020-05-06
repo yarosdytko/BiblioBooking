@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>es.code.urjc.BiblioBookingApplication</OriginalElement>
+  <nodes>
+    <node x="468.78678784013573" y="176.5">es.code.urjc.BiblioBookingApplication.Reserva</node>
+    <node x="548.0" y="715.0">es.code.urjc.BiblioBookingApplication.MenuHandlerConfiguration</node>
+    <node x="515.6617878401357" y="343.0">es.code.urjc.BiblioBookingApplication.ReservasRepository</node>
+    <node x="340.0466943027209" y="562.0">es.code.urjc.BiblioBookingApplication.DataBaseLoader</node>
+    <node x="294.78678784013573" y="343.0">es.code.urjc.BiblioBookingApplication.SalasRepository</node>
+    <node x="561.5466943027209" y="562.0">es.code.urjc.BiblioBookingApplication.ReservasController</node>
+    <node x="1286.7477040816323" y="343.0">es.code.urjc.BiblioBookingApplication.ApiRestCommands</node>
+    <node x="1486.9584821428566" y="562.0">es.code.urjc.BiblioBookingApplication.SecurityConfiguration</node>
+    <node x="155.60133928571418" y="562.0">es.code.urjc.BiblioBookingApplication.SalasController</node>
+    <node x="1070.0" y="636.0">es.code.urjc.BiblioBookingApplication.BiblioBookingApplication</node>
+    <node x="1814.2431228741493" y="562.0">es.code.urjc.BiblioBookingApplication.AdminController</node>
+    <node x="333.28678784013573" y="0.0">es.code.urjc.BiblioBookingApplication.Sala</node>
+    <node x="816.0" y="636.0">es.code.urjc.BiblioBookingApplication.CSRFHandlerInterceptor</node>
+    <node x="1056.2966943027209" y="562.0">es.code.urjc.BiblioBookingApplication.GestionController</node>
+    <node x="809.0" y="715.0">es.code.urjc.BiblioBookingApplication.CSRFHandlerConfiguration</node>
+    <node x="38.0" y="747.0">es.code.urjc.BiblioBookingApplication.LoginController</node>
+    <node x="1509.1492878401357" y="176.5">es.code.urjc.BiblioBookingApplication.UserRepository</node>
+    <node x="308.5" y="747.0">es.code.urjc.BiblioBookingApplication.PublicController</node>
+    <node x="1376.6492878401357" y="0.0">es.code.urjc.BiblioBookingApplication.User</node>
+    <node x="1467.694132653061" y="343.0">es.code.urjc.BiblioBookingApplication.UserRepositoryAuthenticationProvider</node>
+    <node x="555.0" y="636.0">es.code.urjc.BiblioBookingApplication.MenuHandlerInterceptor</node>
+    <node x="2049.694132653061" y="343.0">es.code.urjc.BiblioBookingApplication.UserController</node>
+    <node x="2247.49181547619" y="562.0">es.code.urjc.BiblioBookingApplication.RegisterController</node>
+  </nodes>
+  <notes>
+    <note x="721.6617878401357" y="293.0">
+      <node>es.code.urjc.BiblioBookingApplication.ReservasController</node>
+      <value>Lista de templates usados:\nmisreservas_template\nnueva_reserva_alumno\neditar_reserva_template\nreservas_template\nnueva_reserva\neditar_reserva_gestion_template</value>
+      <edge>
+        <point x="32.625" y="-14.5" />
+        <point x="681.1716943027209" y="502.0" />
+        <point x="856.1617878401357" y="502.0" />
+        <point x="0.0" y="64.5" />
+      </edge>
+    </note>
+    <note x="0.0" y="310.0">
+      <node>es.code.urjc.BiblioBookingApplication.SalasController</node>
+      <value>Lista de templates usados:\nsalas_template\nnueva_sala\nsala_existe\neditar_sala_template</value>
+      <edge>
+        <point x="-57.375" y="-14.5" />
+        <point x="174.72633928571418" y="542.0" />
+        <point x="114.5" y="542.0" />
+        <point x="0.0" y="47.5" />
+      </edge>
+    </note>
+    <note x="2120.7431228741493" y="169.0">
+      <node>es.code.urjc.BiblioBookingApplication.UserController</node>
+      <value>Lista de templates usados:\nperfil</value>
+      <edge>
+        <point x="48.66666666666663" y="-14.5" />
+        <point x="2171.3607993197274" y="273.0" />
+        <point x="2235.2431228741493" y="273.0" />
+        <point x="0.0" y="22.0" />
+      </edge>
+    </note>
+    <note x="1788.694132653061" y="301.5">
+      <node>es.code.urjc.BiblioBookingApplication.AdminController</node>
+      <value>Lista de templates usados:\ncontrol_template\nusuarios_template\nnuevo_usuario\nusuario_existe_template\neditar_user_template</value>
+      <edge>
+        <point x="0.0" y="-14.5" />
+        <point x="1890.7431228741493" y="542.0" />
+        <point x="1903.194132653061" y="542.0" />
+        <point x="0.0" y="56.0" />
+      </edge>
+    </note>
+    <note x="1033.6617878401357" y="301.5">
+      <node>es.code.urjc.BiblioBookingApplication.GestionController</node>
+      <value>Lista de templates usados:\ncontrol_template\nusuarios_template\nnuevo_usuario_gestion\nusuario_existe_template\neditar_user_template</value>
+      <edge>
+        <point x="0.0" y="-14.5" />
+        <point x="1139.7966943027209" y="512.0" />
+        <point x="1148.1617878401357" y="512.0" />
+        <point x="0.0" y="56.0" />
+      </edge>
+    </note>
+    <note x="2381.7431228741493" y="318.5">
+      <node>es.code.urjc.BiblioBookingApplication.RegisterController</node>
+      <value>Lista de templates usados:\nregistro\nusuario_existe\nusuario_registrado</value>
+      <edge>
+        <point x="69.59999999999991" y="-14.5" />
+        <point x="2404.0918154761903" y="542.0" />
+        <point x="2496.2431228741493" y="542.0" />
+        <point x="0.0" y="39.0" />
+      </edge>
+    </note>
+    <note x="0.0" y="636.0">
+      <node>es.code.urjc.BiblioBookingApplication.LoginController</node>
+      <value>Lista de templates usados:\nlogin\nloginerror</value>
+      <edge>
+        <point x="0.0" y="-14.5" />
+        <point x="0.0" y="30.5" />
+      </edge>
+    </note>
+    <note x="274.0" y="636.0">
+      <node>es.code.urjc.BiblioBookingApplication.PublicController</node>
+      <value>Lista de templates usados:\nindex\ninformacion</value>
+      <edge>
+        <point x="0.0" y="-14.5" />
+        <point x="0.0" y="30.5" />
+      </edge>
+    </note>
+  </notes>
+  <edges>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasRepository" target="es.code.urjc.BiblioBookingApplication.Reserva">
+      <point x="-43.5" y="-14.5" />
+      <point x="559.1617878401357" y="273.0" />
+      <point x="529.4117878401357" y="273.0" />
+      <point x="12.125" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.AdminController" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="30.600000000000023" y="-14.5" />
+      <point x="1921.3431228741495" y="532.0" />
+      <point x="2028.194132653061" y="532.0" />
+      <point x="2028.194132653061" y="129.0" />
+      <point x="1429.8492878401357" y="129.0" />
+      <point x="15.200000000000045" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.UserController" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="-48.66666666666663" y="-14.5" />
+      <point x="2074.0274659863944" y="263.0" />
+      <point x="1623.8635735544215" y="263.0" />
+      <point x="41.71428571428578" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="54.375" y="-14.5" />
+      <point x="702.9216943027209" y="512.0" />
+      <point x="1001.1617878401357" y="512.0" />
+      <point x="1001.1617878401357" y="253.0" />
+      <point x="1540.4350021258501" y="253.0" />
+      <point x="-41.714285714285666" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.CSRFHandlerConfiguration" target="es.code.urjc.BiblioBookingApplication.CSRFHandlerInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.UserRepositoryAuthenticationProvider" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="75.0" y="-14.5" />
+      <point x="1692.694132653061" y="139.0" />
+      <point x="1424.7826211734691" y="139.0" />
+      <point x="10.133333333333326" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.SalasRepository">
+      <point x="-76.125" y="-14.5" />
+      <point x="572.4216943027209" y="472.0" />
+      <point x="422.28678784013573" y="472.0" />
+      <point x="51.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ApiRestCommands" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="38.25" y="-14.5" />
+      <point x="1401.4977040816323" y="149.0" />
+      <point x="1414.6492878401357" y="149.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.Sala" target="es.code.urjc.BiblioBookingApplication.Reserva">
+      <point x="32.571428571428555" y="14.5" />
+      <point x="403.8582164115643" y="49.0" />
+      <point x="517.2867878401357" y="49.0" />
+      <point x="0.0" y="-14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.RegisterController" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="-34.799999999999955" y="-14.5" />
+      <point x="2299.69181547619" y="502.0" />
+      <point x="2251.982621173469" y="502.0" />
+      <point x="2251.982621173469" y="253.0" />
+      <point x="1644.7207164115644" y="253.0" />
+      <point x="62.57142857142867" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.DataBaseLoader" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="54.75" y="-14.5" />
+      <point x="467.7966943027209" y="482.0" />
+      <point x="700.1617878401357" y="482.0" />
+      <point x="700.1617878401357" y="243.0" />
+      <point x="1519.5778592687072" y="243.0" />
+      <point x="-62.571428571428555" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.RegisterController" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="34.799999999999955" y="-14.5" />
+      <point x="2369.29181547619" y="542.0" />
+      <point x="2371.2431228741493" y="542.0" />
+      <point x="2371.2431228741493" y="89.0" />
+      <point x="1450.1159545068024" y="89.0" />
+      <point x="35.4666666666667" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.GestionController" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="-66.80000000000001" y="-14.5" />
+      <point x="1072.996694302721" y="512.0" />
+      <point x="1012.1617878401357" y="512.0" />
+      <point x="1012.1617878401357" y="129.0" />
+      <point x="1404.5159545068022" y="129.0" />
+      <point x="-10.133333333333326" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasRepository" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="43.5" y="-14.5" />
+      <point x="646.1617878401357" y="109.0" />
+      <point x="1394.382621173469" y="109.0" />
+      <point x="-20.26666666666665" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.DataBaseLoader" target="es.code.urjc.BiblioBookingApplication.Sala">
+      <point x="-54.75" y="-14.5" />
+      <point x="358.2966943027209" y="532.0" />
+      <point x="264.2387755102038" y="532.0" />
+      <point x="264.2387755102038" y="149.0" />
+      <point x="360.42964498299284" y="149.0" />
+      <point x="-10.85714285714289" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.Reserva" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="38.80000000000001" y="-14.5" />
+      <point x="556.0867878401357" y="99.0" />
+      <point x="1389.3159545068024" y="99.0" />
+      <point x="-25.333333333333314" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.Reserva">
+      <point x="-54.375" y="-14.5" />
+      <point x="594.1716943027209" y="462.0" />
+      <point x="481.72428784013573" y="462.0" />
+      <point x="-36.375" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.MenuHandlerConfiguration" target="es.code.urjc.BiblioBookingApplication.MenuHandlerInterceptor">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.GestionController" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="66.80000000000001" y="-14.5" />
+      <point x="1206.5966943027208" y="542.0" />
+      <point x="1457.194132653061" y="542.0" />
+      <point x="1457.194132653061" y="263.0" />
+      <point x="1561.2921449829928" y="263.0" />
+      <point x="-20.85714285714289" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.DataBaseLoader" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="18.25" y="-14.5" />
+      <point x="431.2966943027209" y="542.0" />
+      <point x="458.28678784013573" y="542.0" />
+      <point x="458.28678784013573" y="79.0" />
+      <point x="1379.182621173469" y="79.0" />
+      <point x="-35.4666666666667" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.UserController" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="0.0" y="-14.5" />
+      <point x="2122.694132653061" y="273.0" />
+      <point x="2110.2431228741493" y="273.0" />
+      <point x="2110.2431228741493" y="109.0" />
+      <point x="1439.982621173469" y="109.0" />
+      <point x="25.33333333333337" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.SalasController" target="es.code.urjc.BiblioBookingApplication.SalasRepository">
+      <point x="57.375" y="-14.5" />
+      <point x="289.4763392857142" y="542.0" />
+      <point x="320.28678784013573" y="542.0" />
+      <point x="-51.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.ApiRestCommands">
+      <point x="76.125" y="-14.5" />
+      <point x="724.6716943027209" y="522.0" />
+      <point x="1305.8727040816323" y="522.0" />
+      <point x="-57.375" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.AdminController" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="-30.600000000000023" y="-14.5" />
+      <point x="1860.1431228741494" y="522.0" />
+      <point x="1778.194132653061" y="522.0" />
+      <point x="1778.194132653061" y="273.0" />
+      <point x="1603.0064306972786" y="273.0" />
+      <point x="20.85714285714289" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.SecurityConfiguration" target="es.code.urjc.BiblioBookingApplication.UserRepositoryAuthenticationProvider">
+      <point x="0.0" y="-14.5" />
+      <point x="1584.4584821428566" y="542.0" />
+      <point x="1617.694132653061" y="542.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.GestionController" target="es.code.urjc.BiblioBookingApplication.ApiRestCommands">
+      <point x="33.39999999999998" y="-14.5" />
+      <point x="1173.196694302721" y="532.0" />
+      <point x="1344.1227040816323" y="532.0" />
+      <point x="-19.125" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.SalasController" target="es.code.urjc.BiblioBookingApplication.Sala">
+      <point x="-19.125" y="-14.5" />
+      <point x="212.97633928571418" y="542.0" />
+      <point x="239.5" y="542.0" />
+      <point x="239.5" y="129.0" />
+      <point x="338.7153592687072" y="129.0" />
+      <point x="-32.571428571428555" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.UserRepositoryAuthenticationProvider" target="es.code.urjc.BiblioBookingApplication.UserRepository">
+      <point x="-75.0" y="-14.5" />
+      <point x="1542.694132653061" y="273.0" />
+      <point x="1582.1492878401357" y="273.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.Reserva" target="es.code.urjc.BiblioBookingApplication.Sala">
+      <point x="-38.80000000000001" y="-14.5" />
+      <point x="478.4867878401358" y="69.0" />
+      <point x="382.1439306972786" y="69.0" />
+      <point x="10.857142857142833" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.DataBaseLoader" target="es.code.urjc.BiblioBookingApplication.SalasRepository">
+      <point x="-18.25" y="-14.5" />
+      <point x="394.7966943027209" y="542.0" />
+      <point x="371.28678784013573" y="542.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.SalasRepository" target="es.code.urjc.BiblioBookingApplication.Sala">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.UserRepository" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="0.0" y="-14.5" />
+      <point x="1582.1492878401357" y="149.0" />
+      <point x="1419.7159545068023" y="149.0" />
+      <point x="5.066666666666663" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.AdminController" target="es.code.urjc.BiblioBookingApplication.ApiRestCommands">
+      <point x="-61.200000000000045" y="-14.5" />
+      <point x="1829.5431228741495" y="532.0" />
+      <point x="1382.3727040816323" y="532.0" />
+      <point x="19.125" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ApiRestCommands" target="es.code.urjc.BiblioBookingApplication.Reserva">
+      <point x="-38.25" y="-14.5" />
+      <point x="1324.9977040816323" y="233.0" />
+      <point x="553.6617878401357" y="233.0" />
+      <point x="36.375" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.User">
+      <point x="10.875" y="-14.5" />
+      <point x="659.4216943027209" y="492.0" />
+      <point x="711.1617878401357" y="492.0" />
+      <point x="711.1617878401357" y="119.0" />
+      <point x="1399.4492878401356" y="119.0" />
+      <point x="-15.199999999999989" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.ReservasController" target="es.code.urjc.BiblioBookingApplication.ReservasRepository">
+      <point x="-10.875" y="-14.5" />
+      <point x="637.6716943027209" y="442.0" />
+      <point x="602.6617878401357" y="442.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="es.code.urjc.BiblioBookingApplication.RegisterController" target="es.code.urjc.BiblioBookingApplication.ApiRestCommands">
+      <point x="-69.60000000000002" y="-14.5" />
+      <point x="2264.8918154761905" y="512.0" />
+      <point x="1420.6227040816323" y="512.0" />
+      <point x="57.375" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5017103762827823" x="1305.4999999999998" y="388.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

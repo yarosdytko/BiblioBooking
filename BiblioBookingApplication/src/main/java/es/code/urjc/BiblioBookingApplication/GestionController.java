@@ -1,5 +1,7 @@
 package es.code.urjc.BiblioBookingApplication;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,6 +18,8 @@ public class GestionController {
 	
 	@Autowired
 	private UserRepository usuarios;
+	
+	@Autowired ReservasRepository reservas;
 
 	@RequestMapping("/gestion")
 	public String gestion(Model model) {
@@ -82,6 +86,10 @@ public class GestionController {
 
 		usuarios.updateUser(name, lastname, username, email,(long) id);
 
+		User u = usuarios.findById((long)id);
+
+		apiRestCommands.modifyUser(u);
+
 		return "redirect:/gestion/usuarios";
 	}
 
@@ -92,6 +100,15 @@ public class GestionController {
 		User user = usuarios.findById(id);
 		
 		apiRestCommands.deleteUser(user);
+		
+		List<Reserva> r = reservas.findByUsuario(user);
+		
+		if(!r.isEmpty()) {
+			for(int i=0;i<r.size();i++) {
+				
+				reservas.deleteById(r.get(i).getId());
+			}
+		}
 
 		usuarios.delete(user);
 

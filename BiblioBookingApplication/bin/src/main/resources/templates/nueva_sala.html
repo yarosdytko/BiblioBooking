@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../../../css/style.css">
+<link rel="stylesheet" type="text/css" href="../../../css/register.css">
+<title>BiblioBooking</title>
+</head>
+<body>
+	<main>
+		<header>
+			<h2>Bienvenido a BibilioBooking</h2>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/">Inicio</a></li>
+				<li><a href="/informacion">Informacion</a></li>
+				{{#alumno}}
+				<li><a href="/reservas">Mis reservas</a></li>
+				{{/alumno}}
+				{{#usuario}}
+				<li><a href="/perfil">Mi perfil</a></li>
+				{{/usuario}}
+				{{#invitado}}
+				<li><a href="/login">Login</a></li>
+				<li><a href="/register">Registrarse</a></li>
+				{{/invitado}}
+				{{#admin}}
+				<li><a href="/admin">Panel Administrador</a></li>
+				{{/admin}}
+				{{#gestion}}
+				<li><a href="/gestion">Gestion</a></li>
+				{{/gestion}}
+				{{#noInvitado}}
+				<li><a href="/logout">LogOut</a></li>
+				{{/noInvitado}}
+			</ul>
+		</nav>
+		<section>
+			<h3>Nueva Sala</h3>
+			<form action="/{{ruta}}/salas/nueva_sala/crear" method="POST" class="registerForm">
+			<div class="cont">
+				<label for="numeroSala"><b>Numero sala</b></label>
+				<input type="number" name="numeroSala" required></input><br>
+				
+				<label for="capacidadMaxima"><b>Capacidad maxima</b></label>
+				<input type="number" name="capacidadMaxima" required></input><br>
+				
+				<label for="numeroMesas"><b>Numero mesas</b></label>
+				<input type="number" name="numeroMesas" required></input><br>
+				
+				<label for="numeroSillas"><b>Numero sillas</b></label>
+				<input type="number" name="numeroSillas" required></input><br>
+				<input type="hidden" name="_csrf" value="{{token}}"/>
+				<input type="submit" value="Confirmar"/>
+			</div>
+			</form>
+			<div class="registerForm">
+				<a href="/{{ruta}}/salas"><button>Volver</button></a>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

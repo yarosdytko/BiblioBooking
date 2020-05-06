@@ -1,5 +1,7 @@
 package es.code.urjc.BiblioBookingApplication;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,9 @@ public class SalasController {
 
     @Autowired
     private SalasRepository salas;
+    
+    @Autowired
+    private ReservasRepository reservas;
 
     @RequestMapping("/{ruta}/salas")
     public String salas(Model model, @PathVariable String ruta) {
@@ -46,7 +51,7 @@ public class SalasController {
 
     @RequestMapping("/{ruta}/salas/editar_sala{id}")
     public String editar_sala(Model model, @PathVariable String ruta, @PathVariable int id) {
-        Sala s = salas.getOne((long) id);
+        Sala s = salas.getById((long) id);
 
         model.addAttribute("ruta", ruta);
         model.addAttribute("numeroSala",s.getNumeroSala());
@@ -67,7 +72,18 @@ public class SalasController {
 
     @RequestMapping("/{ruta}/salas/eliminar_sala{id}")
     public String eliminar_sala(@PathVariable String ruta,@PathVariable int id){
-        salas.deleteById((long) id);
+    	
+    	Sala s = salas.getById((long)id);
+    	
+    	List<Reserva> r = reservas.findBySala(s);
+		
+		if(!r.isEmpty()) {
+			for(int i=0;i<r.size();i++) {
+				reservas.deleteById(r.get(i).getId());
+			}
+		}
+    	
+        salas.borrarSala((long)id);
 
         return "redirect:/{ruta}/salas";
     }
