@@ -244,9 +244,10 @@ Para el despliegue de la aplicacion se ha usado docker compose con 2 instancias 
 Una vez clonado el repositorio para realizar el despliegue de la aplicacion hay que situarse en la carpeta docker y ejecutar los siguentes comandos:
 
 >docker-compose build :.
+>
 >docker-compose up --scale webserver=2
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTU5NDgwOTAsLTgwMDAyMzc0OCw2Nz
+eyJoaXN0b3J5IjpbLTE3MDE5NDk1MzQsLTgwMDAyMzc0OCw2Nz
 QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
 NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
 UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
