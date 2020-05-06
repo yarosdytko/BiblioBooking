@@ -216,6 +216,7 @@ ApiRest del servicio interno consiste en que el servicio interno recibe mediante
 La api tiene establecidas dos rutas:
 
 /api/reservas/
+
 /api/usuarios/
 
 Mediante peticiones http POST,PUT y DELETE se relizar diferentes funcionalidades definidas, toda la informacion viaja en el cuerpo de las peticiones y son objetos de las clases Rererva o User, una vez recibida la peticion la api extrae informacion del cuerpo de mensaje, la procesa y se envian correos informativos a los usuarios a los cuales va destinada esa informacion.
@@ -228,7 +229,7 @@ nuevo usuario -> http//mailserver:8082/api/usuarios/ metodo http PUT
 modificacion de datos de usuario -> http//mailserver:8082/api/usuarios/ metodo http POST
 borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1MDc4NDEwLDE2NDIxMDMyNjQsLTEyMD
+eyJoaXN0b3J5IjpbNjc0Mjc0MjMyLDE2NDIxMDMyNjQsLTEyMD
 AzODY3ODAsMTk1OTk4ODYyNiwxNTEwNzk5NTg4LC03MTg2MzUw
 OTQsNDE3OTU5OTAyLDU1MTc0ODAxNiwtNTc0NTQ2MzA0LC0xNj
 M4NDY2MzUwXX0=
