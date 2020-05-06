@@ -238,11 +238,12 @@ borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
 
 Diagrama de red de contenedores docker
 
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase_4/diagrama_red_docker.png)
 
 Para el despliegue de la aplicacion se ha usado docker compose con 2 instancias de la aplicacion , 1 instancia del balanceador de carga, 1 instancia de servicio interno y 1 instancia de la base datos mysql
 una vez clonado el repositorio para realizar el despliegue de la aplicacion 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTAyNjg3NDYsLTgwMDAyMzc0OCw2Nz
+eyJoaXN0b3J5IjpbLTE4NjEyMjk2MzcsLTgwMDAyMzc0OCw2Nz
 QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
 NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
 UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
