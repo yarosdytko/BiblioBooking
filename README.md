@@ -201,9 +201,11 @@ neva_sala
 **Diagramas UML de clases y templates**
 **Aplicacion**
 
-![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
+![ ]([https://github.com/yarosdytko/BiblioBooking/blob/master/Fase%204/Fase4_Diagrama_BibliobookingApplication_Class_Diagramm.png](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase%204/Fase4_Diagrama_BibliobookingApplication_Class_Diagramm.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDAzODY3ODAsMTk1OTk4ODYyNiwxNT
-EwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MTc0ODAx
-NiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbLTE2OTIxMDU2MDEsLTEyMDAzODY3ODAsMT
+k1OTk4ODYyNiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5
+OTAyLDU1MTc0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX
+0=
 -->
