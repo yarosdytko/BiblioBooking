@@ -247,9 +247,9 @@ Una vez clonado el repositorio para realizar el despliegue de la aplicacion hay 
 >
 >sudo docker-compose up --scale webserver=2
 
-Se iniciaran todas las instancias y se podra acceder a la aplicacion
+Se iniciaran todas las instancias y se podra acceder a la aplicacion en 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODg2Mjg5MjEsLTgwMDAyMzc0OCw2Nz
+eyJoaXN0b3J5IjpbLTE5NTg2NzUyODAsLTgwMDAyMzc0OCw2Nz
 QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
 NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
 UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
