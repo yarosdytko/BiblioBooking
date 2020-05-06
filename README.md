@@ -236,10 +236,10 @@ borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
 
 **Docker**
 
-Para el despliegue
+Para el despliegue del 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwMDAyMzc0OCw2NzQyNzQyMzIsMTY0Mj
-EwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4NjI2LDE1MTA3OTk1
-ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNTUxNzQ4MDE2LC01Nz
-Q1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbNzY5NzgxMDI3LC04MDAwMjM3NDgsNjc0Mj
+c0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3ODAsMTk1OTk4ODYy
+NiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MT
+c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
