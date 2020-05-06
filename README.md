@@ -233,9 +233,13 @@ nuevo usuario -> http//mailserver:8082/api/usuarios/ metodo http PUT
 modificacion de datos de usuario -> http//mailserver:8082/api/usuarios/ metodo http POST
 
 borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
+
+**Docker**
+
+Para el despliegue
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg4OTcyODc0LDY3NDI3NDIzMiwxNjQyMT
-AzMjY0LC0xMjAwMzg2NzgwLDE5NTk5ODg2MjYsMTUxMDc5OTU4
-OCwtNzE4NjM1MDk0LDQxNzk1OTkwMiw1NTE3NDgwMTYsLTU3ND
-U0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbLTgwMDAyMzc0OCw2NzQyNzQyMzIsMTY0Mj
+EwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4NjI2LDE1MTA3OTk1
+ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNTUxNzQ4MDE2LC01Nz
+Q1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
