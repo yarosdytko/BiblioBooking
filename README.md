@@ -236,10 +236,11 @@ borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
 
 **Docker**
 
-Para el despliegue del 
+Para el despliegue de la aplicacion se ha usado docker compose con 2 instancias de la aplicacion , 1 instancia del balanceador de carga, 1 instancia de servicio interno y 1 instancia de la base datos mysql
+C
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzY5NzgxMDI3LC04MDAwMjM3NDgsNjc0Mj
-c0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3ODAsMTk1OTk4ODYy
-NiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MT
-c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbLTc3Njg2Mjk4OSwtODAwMDIzNzQ4LDY3ND
+I3NDIzMiwxNjQyMTAzMjY0LC0xMjAwMzg2NzgwLDE5NTk5ODg2
+MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNzk1OTkwMiw1NT
+E3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
 -->
