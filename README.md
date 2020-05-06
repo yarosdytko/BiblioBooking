@@ -206,8 +206,12 @@ neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase_4/Fase4_Diagrama_BibliobookingApplication_Class_Diagramm.png)
 
 
+**Servicio interno**
+
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase_4/Fase4_Diagrama_BibliobbokingServiceApplication_Class_Diagramm.png)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzI4MzYzOCwtMTIwMDM4Njc4MCwxOT
+eyJoaXN0b3J5IjpbMjA5Mzg2MjY2OCwtMTIwMDM4Njc4MCwxOT
 U5OTg4NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5
 MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ
 ==
