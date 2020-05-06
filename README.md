@@ -253,10 +253,16 @@ Para ver los stats del balanceador de carga: http://localhost:9443//haproxy?stat
 
 Para consultar el contenido de los cahces:
 
-reservas: https://localhost:
+reservas: https://localhost:443/cacheReservas
+
+salas: https://localhost:443/cacheSalas
+
+usuarios: https://localhost:443/cacheUsers
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM4Mjg4ODgxLC04MDAwMjM3NDgsNjc0Mj
-c0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3ODAsMTk1OTk4ODYy
-NiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MT
-c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
+eyJoaXN0b3J5IjpbLTE4NTQ0NjI5NTUsLTgwMDAyMzc0OCw2Nz
+QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
+NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
+UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
 -->
