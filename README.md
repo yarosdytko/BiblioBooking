@@ -240,7 +240,7 @@ Diagrama de red de contenedores docker
 
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/Fase_4/diagrama_red_docker.png)
 
-Para el despliegue de la aplicacion se ha usado docker compose con 2 instancias de la aplicacion , 1 instancia del balanceador de carga, 1 instancia de servicio interno y 1 instancia de la base datos mysql.
+Para el despliegue de la aplicacion se ha usado docker compose con 2 instancias de la aplicacion , 1 instancia del balanceador de carga, 1 instancia de servicio interno y 1 instancia de la base datos mysql. El trafico va por https hasta la aplicacion.
 Una vez clonado el repositorio para realizar el despliegue de la aplicacion hay que situarse en la carpeta docker y ejecutar los siguentes comandos:
 
 >sudo docker-compose build
@@ -265,8 +265,9 @@ Tambien se ha implementado el mecanismo de la sesion distribuida, asi si se cae 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyMzAzMzY4NSwtODAwMDIzNzQ4LDY3ND
-I3NDIzMiwxNjQyMTAzMjY0LC0xMjAwMzg2NzgwLDE5NTk5ODg2
-MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNzk1OTkwMiw1NT
-E3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbLTIxMDg4NDI1NDQsMjEyMzAzMzY4NSwtOD
+AwMDIzNzQ4LDY3NDI3NDIzMiwxNjQyMTAzMjY0LC0xMjAwMzg2
+NzgwLDE5NTk5ODg2MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LD
+QxNzk1OTkwMiw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2
+NjM1MF19
 -->
