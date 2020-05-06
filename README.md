@@ -222,9 +222,10 @@ modificacion de la reserva -> http//mailserver:8082/api/reservas/ metodo http PO
 eliminacion de la reserva -> http//mailserver:8082/api/reservas/ metodo http DELETE
 
 nuevo usuario -> http//mailserver:8082/api/usuarios/ metodo http PUT
-modifica
+modificacion de datos de usuario -> http//mailserver:8082/api/usuarios/ metodo http POST
+borrado de usuario -> http//mailserver:8082/api/usuarios/ metodo http DELETE
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MzA3NTEyMSwtMTIwMDM4Njc4MCwxOT
+eyJoaXN0b3J5IjpbMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOT
 U5OTg4NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5
 MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ
 ==
