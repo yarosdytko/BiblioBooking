@@ -247,10 +247,16 @@ Una vez clonado el repositorio para realizar el despliegue de la aplicacion hay 
 >
 >sudo docker-compose up --scale webserver=2
 
-Se iniciaran todas las instancias y se podra acceder a la aplicacion en 
+Se iniciaran todas las instancias y se podra acceder a la aplicacion en la url https://localhost:443
+
+Para ver los stats del balanceador de carga: http://localhost:9443//haproxy?stats
+
+Para consultar el contenido de los cahces:
+
+reservas: https://localhost:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTg2NzUyODAsLTgwMDAyMzc0OCw2Nz
-QyNzQyMzIsMTY0MjEwMzI2NCwtMTIwMDM4Njc4MCwxOTU5OTg4
-NjI2LDE1MTA3OTk1ODgsLTcxODYzNTA5NCw0MTc5NTk5MDIsNT
-UxNzQ4MDE2LC01NzQ1NDYzMDQsLTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbNDM4Mjg4ODgxLC04MDAwMjM3NDgsNjc0Mj
+c0MjMyLDE2NDIxMDMyNjQsLTEyMDAzODY3ODAsMTk1OTk4ODYy
+NiwxNTEwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MT
+c0ODAxNiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
