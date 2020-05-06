@@ -1,10 +1,15 @@
 # BiblioBooking
 **Nombre de la aplicacion Web:** BiblioBooking
 
+Video para fase 4:
+
+[![BibliobookingVideo](http://img.youtube.com/vi/5YaQ_lO2vd4/0.jpg)](http://www.youtube.com/watch?v=5YaQ_lO2vd4 "BibliobookingVideo")
+
 # Indice
 1. [Fase 1](#fase1)
 2. [Fase 2](#fase2)
 3. [Fase 3](#fase3)
+4. [Fase 4](#fase4)
 
 
 ## Fase1
@@ -191,8 +196,14 @@ salas
 neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 
+
+## Fase4
+**Diagramas UML de clases y templates**
+**Aplicacion**
+
+![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNz
-k1OTkwMiw1NTE3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1
-MF19
+eyJoaXN0b3J5IjpbLTEyMDAzODY3ODAsMTk1OTk4ODYyNiwxNT
+EwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MTc0ODAx
+NiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
