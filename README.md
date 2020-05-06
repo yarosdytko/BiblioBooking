@@ -261,9 +261,11 @@ usuarios: https://localhost:443/cacheUsers
 
 Inicialmente la aplicacion crea tres usuarios por defecto: admin, empleado y alumno, los tres usuarios tienen como password: 1234
 
+Tambien se ha implementado el mecanismo de la sesion distribuida, asi si se cae alguna instancia de la aplicacion web los usuarios no tendran que volver a hacer login.
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTI4MTYyNCwtODAwMDIzNzQ4LDY3ND
+eyJoaXN0b3J5IjpbMjEyMzAzMzY4NSwtODAwMDIzNzQ4LDY3ND
 I3NDIzMiwxNjQyMTAzMjY0LC0xMjAwMzg2NzgwLDE5NTk5ODg2
 MjYsMTUxMDc5OTU4OCwtNzE4NjM1MDk0LDQxNzk1OTkwMiw1NT
 E3NDgwMTYsLTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
