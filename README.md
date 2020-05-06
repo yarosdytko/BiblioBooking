@@ -1,7 +1,8 @@
 # BiblioBooking
 **Nombre de la aplicacion Web:** BiblioBooking
 
-Video para fase 4
+Video para fase 4:
+
 
 # Indice
 1. [Fase 1](#fase1)
@@ -195,7 +196,7 @@ neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjU3MjY3ODIwLDE1MTA3OTk1ODgsLTcxOD
-YzNTA5NCw0MTc5NTk5MDIsNTUxNzQ4MDE2LC01NzQ1NDYzMDQs
-LTE2Mzg0NjYzNTBdfQ==
+eyJoaXN0b3J5IjpbMTk1OTk4ODYyNiwxNTEwNzk5NTg4LC03MT
+g2MzUwOTQsNDE3OTU5OTAyLDU1MTc0ODAxNiwtNTc0NTQ2MzA0
+LC0xNjM4NDY2MzUwXX0=
 -->
