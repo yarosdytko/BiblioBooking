@@ -196,8 +196,11 @@ salas
 neva_sala
 ![ ](https://github.com/yarosdytko/BiblioBooking/blob/master/capturas_fase3/admin/admin_nueva_sala.png)
 
+
+## Fase4
+**Diagramas UML de clases y templates**
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ0NTYyNTYwLDE5NTk5ODg2MjYsMTUxMD
-c5OTU4OCwtNzE4NjM1MDk0LDQxNzk1OTkwMiw1NTE3NDgwMTYs
-LTU3NDU0NjMwNCwtMTYzODQ2NjM1MF19
+eyJoaXN0b3J5IjpbLTE5OTU3ODk2MzQsMTk1OTk4ODYyNiwxNT
+EwNzk5NTg4LC03MTg2MzUwOTQsNDE3OTU5OTAyLDU1MTc0ODAx
+NiwtNTc0NTQ2MzA0LC0xNjM4NDY2MzUwXX0=
 -->
